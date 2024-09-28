@@ -1,0 +1,93 @@
+footer {
+  background-color: #e4e4e4;
+  color: #222;
+  font-size: 13px;
+}
+a {
+  color: #222 !important;
+  font-size: 13px !important;
+}
+
+.row a:hover {
+  text-decoration: underline !important;
+}
+
+h6 {
+  font-size: 13px !important;
+}
+
+#basic-addon1 {
+  background-color: #222;
+  color: white;
+  font-size: 14px;
+  width: 100px;
+}
+
+.input {
+  font-size: 14px;
+  background-color: transparent !important;
+}
+.input::placeholder {
+  color: #222 !important;
+  font-weight: 500;
+}
+.input:focus {
+  outline: none !important;
+}
+
+button[aria-expanded="true"] {
+  color: red !important;
+}
+button::after {
+  display: none !important;
+}
+.accordion-button {
+  background-color: #e4e4e4 !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  display: flex;
+  justify-content: space-between;
+}
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.center {
+  margin-top: 80px;
+}
+
+.center .head {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.center .head .head {
+  font-weight: bold;
+}
+
+.last {
+  font-weight: 500;
+}
+
+.accordion-body {
+  background-color: #e4e4e4 !important;
+}
+
+.lang {
+  font-size: 13px !important;
+  font-weight: 500;
+}
+
+.lang .active {
+  color: #6c757d !important;
+}
+.lang .non-active {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-us {
+    width: 260px;
+  }
+}

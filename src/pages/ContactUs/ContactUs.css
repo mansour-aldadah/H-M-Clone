@@ -1,0 +1,16 @@
+.contact-us {
+  background-color: #faf9f8;
+  color: #222222;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 20px 10% !important;
+  }
+}
