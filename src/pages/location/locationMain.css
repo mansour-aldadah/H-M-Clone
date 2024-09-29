@@ -2,7 +2,7 @@
 .container-fluid {
     padding: 20px;
 }
-
+span{padding-left: 20px;}
 /* Sidebar styling */
 .sidebar {
     border-right: 1px solid #ddd;
@@ -12,7 +12,6 @@
     text-align: right;
 }
 
-/* Search bar section styling */
 .search-bar {
     display: flex;
     justify-content: space-evenly;
@@ -49,7 +48,7 @@
 /* Make the layout stack vertically on mobile */
 @media (max-width: 768px) {
     .search-bar input {
-        width: 60%;
+        width: 100%;
     }
 
     .sidebar {
@@ -62,26 +61,13 @@
         width: 100%;
     }
 
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-bar button {
-        margin: 5px 0;
-        width: 100%;
-    }
-
-    .back-button {
-        width: 100%;
-        padding: 15px;
-    }
+  
 }
 
 a {
     font-size: 12px;
     text-decoration: none;
-    color: black;
+    color: rgb(118, 105, 105);
 }
 
 p {
@@ -112,3 +98,33 @@ h4 {
 span {
     padding-bottom: 3rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-fluid {
+        padding: 15px;
+    }
+
+    .sidebar {
+        margin-left: 50px;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .search-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .search-bar button {
+        margin: 0 5px;
+    }
+
+    .back-button {
+        padding: 10px 20px;
+    }
+}
+
+.red{color: red;}

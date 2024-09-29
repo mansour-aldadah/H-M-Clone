@@ -4,6 +4,7 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import { FaHeart, FaShoppingBag, FaSearch } from 'react-icons/fa'; // Importing icons from react-icons
 // import './headerMenu.css'; // Import your custom CSS file
+// // import HM from '../../../assets/images/logos/HM.png';
 
 // const HeaderMenu = () => {
 //   const [activeLink, setActiveLink] = useState(null); // State to track the active link
@@ -109,6 +110,27 @@ const HeaderMenu = () => {
     <>
       <Navbar expanded={expanded} bg="light" expand="lg" className="p-0">
         <Container fluid className="d-flex align-items-center justify-content-between">
+           {/* Replace Form with search icon for mobile/tablet
+           <div className="d-flex align-items-center">
+            <FaSearch size={24} onClick={handleSearchClick} style={{ cursor: 'pointer' }} />
+          </div>
+         */}
+          <Form className="d-flex align-items-center">
+          <FormControl
+              type="search"
+              placeholder="عن ماذا تبحث؟  "  
+              className="me-2 form-control shadow-none border-0"
+              aria-label="Search"
+              onChange={(e) => console.log(e.target.value)} // for logging purposes only  
+
+            />                   <FaSearch  onClick={handleSearchClick}/>
+
+          </Form>
+          <Navbar.Brand className="mx-auto">
+            <img src={HM} alt="Logo1" style={{ height: "40px" }} />
+          </Navbar.Brand>
+
+         
           <Nav className="d-flex align-items-center">
             <Nav.Link href="#favorites" className="p-0">
               <FaHeart size={24} />
@@ -120,14 +142,6 @@ const HeaderMenu = () => {
             </Nav.Link>
           </Nav>
 
-          <Navbar.Brand className="mx-auto">
-            <img src={HM} alt="Logo1" style={{ height: "40px" }} />
-          </Navbar.Brand>
-
-          {/* Replace Form with search icon for mobile/tablet */}
-          <div className="d-flex align-items-center">
-            <FaSearch size={24} onClick={handleSearchClick} style={{ cursor: 'pointer' }} />
-          </div>
         </Container>
       </Navbar>
 

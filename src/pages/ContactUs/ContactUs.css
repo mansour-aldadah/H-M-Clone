@@ -1,16 +1,15 @@
-.contact-us {
+.call-us {
   background-color: #faf9f8;
   color: #222222;
 }
-
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
+h3 {
+  font-size: 20px;
 }
 
-@media screen and (min-width: 992px) {
-  .container {
-    padding: 20px 10% !important;
-  }
+.call-us .container {
+  max-width: 1050px !important;
+}
+
+.call-us-main {
+  max-width: 400px !important;
 }

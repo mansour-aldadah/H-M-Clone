@@ -25,6 +25,7 @@ const LoginPage = () => {
               <Button variant="primary" type="submit" className="btn_style social-media-buttons border-0">
                  تسجيل الدخول
               </Button>
+              <a href="/forgot-password">هل نسيت كلمه السر؟</a>
             </Form>
           </Col>
 
