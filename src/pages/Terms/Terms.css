@@ -1,10 +1,10 @@
-.purchase-terms {
+.terms {
   background-color: #faf9f8;
   color: #222222;
 }
 
 .container {
-  max-width: 1026px;
+  width: 100%;
 }
 
 h3 {
@@ -19,14 +19,5 @@ p {
 
 ul li {
   list-style-position: inside;
-}
-
-th {
-  background-color: transparent !important;
-  font-size: 16px;
-}
-
-td {
-  font-size: 13px;
-  background-color: transparent !important;
+  font-size: 12px;
 }
