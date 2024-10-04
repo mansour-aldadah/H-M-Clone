@@ -1,7 +1,16 @@
 @import url(https://db.onlinewebfonts.com/c/70f3e46b3bb904260d1b1a6e0f2edf08?family=HM+Sans+Regular);
 
+.row{
+
+    margin: 0 !important;
+}
+.Root-1{
+    max-width: 1000px;
+    margin: auto;
+}
 .home-content{
     margin: auto;
+    padding-bottom: 10rem;
 }
 .C-Item a{
     text-decoration: none;
@@ -36,8 +45,8 @@
 }
 .campaign-first-heading-hp a{
     text-decoration: none;
-    color: white;
-    font-size: 40px;
+    color: white !important;
+    font-size: 40px !important;
     font-weight: bold;
     z-index: 2;
 
@@ -58,8 +67,8 @@
 
 .campaign-caption-hp a{
     text-decoration: none;
-    color: white;
-    font-size: 15px;
+    color: white !important;
+    font-size: 15px !important;
     font-weight: bold;
     z-index: 2;
 
@@ -87,8 +96,8 @@
 
 .campaign-heading-hp-mobile a{
     text-decoration: none;
-    color: white;
-    font-size: 20px;
+    color: white !important;
+    font-size: 20px !important;
     font-weight: bold;
     z-index: 2;
 }
@@ -96,8 +105,8 @@
 
 .campaign-caption-hp-mobile a{
     text-decoration: none;
-    color: white;
-    font-size: 10px;
+    color: white !important;
+    font-size: 10px !important;
     font-weight: bold;
     z-index: 2;
 }
@@ -116,8 +125,8 @@
 
 .campaign-heading-hp a{
     text-decoration: none;
-    color: white;
-    font-size: 40px;
+    color: white !important;
+    font-size: 40px !important;
     font-weight: bold;
     z-index: 2;
 
@@ -136,5 +145,4 @@
     font-size: 13px;
     font-weight: bold;
 }
-
 
