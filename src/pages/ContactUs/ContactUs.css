@@ -2,14 +2,105 @@
   background-color: #faf9f8;
   color: #222222;
 }
-h3 {
+.call-us h3 {
   font-size: 20px;
 }
 
-.call-us .container {
+.call-us .call-us .container {
   max-width: 1050px !important;
 }
+.call-us .form-check-input:checked {
+  background-color: #222 !important;
+}
+.call-us .form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
-.call-us-main {
+.call-us .form-floating > .form-control ~ label::after {
+  background-color: transparent !important;
+  right: -50px !important;
+}
+.call-us .call-us-main {
   max-width: 400px !important;
+}
+.call-us .rat input {
+  border: 2px solid #222 !important;
+  box-shadow: none !important;
+}
+.call-us .row input {
+  background-color: transparent !important;
+  border-radius: 0;
+  padding: 1.2rem 0 0 0 !important;
+  border-bottom: 1px solid #222 !important;
+}
+.call-us .selected2 .col-6 {
+  border-bottom: 1px solid #222 !important;
+  width: 45%;
+  text-align: center !important;
+  margin-right: 10px;
+  padding: 0 !important;
+}
+.call-us .selected2 .col-6 input {
+  border-bottom: none !important;
+}
+.call-us .row input label {
+  background-color: transparent !important;
+  font-size: 12px !important;
+}
+.call-us .form-floating > label {
+  right: 0;
+  padding: 25px 0 25px 0;
+  background-color: transparent !important;
+  transform-origin: 100% 0 !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  transition: transform 0.1s ease-in-out !important;
+}
+.call-us .selected .form-floating > label {
+  font-size: 15px !important;
+}
+.call-us .form-floating {
+  background-color: transparent !important;
+}
+.call-us .form-floating > .form-control:focus ~ label {
+  color: #222;
+  transform: scale(1) translateY(-1.2rem) translateX(0.15rem) !important;
+}
+.call-us .selected .form-floating > .form-control:focus ~ label {
+  color: #222;
+  transform: scale(0.8) translateY(-1.2rem) translateX(0.15rem) !important;
+}
+
+.call-us .form-check .form-check-input {
+  margin-left: 0;
+}
+.call-us .form-check label {
+  margin-right: 10px;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  margin-top: 1px;
+}
+
+.call-us p {
+  font-size: 13px !important;
+}
+
+.call-us .class-220 {
+  top: 50%;
+  left: 0;
+  font-size: 14px !important;
+}
+
+.call-us .selected2 .form-floating > .form-control:focus ~ label {
+  transform: none !important;
+}
+
+.call-us .selected2 .form-floating > label {
+  right: 0;
+  padding: 0.3rem 0 0.3rem 0;
+  background-color: transparent !important;
+  transform-origin: 100% 0 !important;
+  transition: none !important;
 }

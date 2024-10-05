@@ -1,0 +1,52 @@
+.headerMenu .border-top-only {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  border-radius: 0 !important;
+  outline: none;
+  /* padding-top: 10px; 
+    margin-bottom: 100px; */
+}
+@media (min-width: 992px) {
+  .headerMenu .navbar-nav .nav-link:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.1
+    ); /* Change this to your desired hover effect */
+    z-index: -1; /* Ensure it stays behind the text */
+  }
+}
+.headerMenu img {
+  margin-left: 200px;
+}
+
+/* headerMenu.css */
+
+@media (max-width: 768px) {
+  .headerMenu .navbar-collapse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh; /* Fill the whole screen */
+    background-color: #f8f9fa; /* Match the navbar background */
+    z-index: 1000;
+    overflow-y: auto; /* Allow scrolling if content is long */
+  }
+
+  .headerMenu .navbar-nav {
+    flex-direction: row; /* Stack links vertically */
+  }
+
+  .headerMenu .navbar-toggler {
+    margin-left: auto; /* Position the toggle button to the right */
+  }
+}

@@ -3,23 +3,23 @@
   color: #222222;
 }
 
-.container {
+.questions .container {
   width: 100%;
 }
-a {
+.questions a {
   font-size: 12px !important;
 }
-h3 {
+.questions h3 {
   font-size: 20px;
 }
-h5 {
+.questions h5 {
   font-size: 14px;
 }
-p {
+.questions p {
   font-size: 12px;
 }
 
-li {
+.questions li {
   list-style-position: inside;
   font-size: 12px;
 }

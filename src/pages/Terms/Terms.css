@@ -3,21 +3,21 @@
   color: #222222;
 }
 
-.container {
+.terms .container {
   width: 100%;
 }
 
-h3 {
+.terms h3 {
   font-size: 20px;
 }
-h5 {
+.terms h5 {
   font-size: 14px;
 }
-p {
+.terms p {
   font-size: 12px;
 }
 
-ul li {
+.terms ul li {
   list-style-position: inside;
   font-size: 12px;
 }

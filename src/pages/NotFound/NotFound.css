@@ -1,0 +1,35 @@
+.not-found {
+  background-color: #faf9f8;
+  color: #222222;
+}
+
+.not-found .container {
+  background-color: #f2f2f2;
+  padding: 50px 120px;
+  max-width: 1250px;
+}
+
+.not-found h5 {
+  font-size: 14px;
+}
+.not-found p {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .not-found .container {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .not-found .container {
+    padding: 50px 30px;
+  }
+}
+.not-found .carousel-item {
+  transition: transform 0.2s ease-in-out !important;
+}
+.not-found .carousel {
+  background-color: white !important;
+}

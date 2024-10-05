@@ -1,0 +1,22 @@
+.all-products {
+  background-color: #faf9f8;
+  color: #222222;
+}
+.all-products h5 {
+  font-size: 16px;
+}
+.all-products h5:hover {
+  text-decoration: underline;
+  color: #c9002e !important;
+  cursor: pointer;
+}
+.all-products p {
+  font-size: 13px;
+}
+.all-products p a {
+  font-size: 13px;
+}
+.all-products p a:hover {
+  text-decoration: underline;
+  color: #c9002e !important;
+}

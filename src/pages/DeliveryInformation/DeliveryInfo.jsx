@@ -1,26 +1,10 @@
 import "./DeliveryInfoStyle.css";
 import { Row, Col } from "react-bootstrap";
-import image1 from "./deliveryPageImages/image1.jpg";
-import image2 from "./deliveryPageImages/image2.jpg";
+import image2 from "../../assets/deliveryPageImages/image1.jpg";
+import image1 from "../../assets/deliveryPageImages/image2.jpg";
 import { useState, useEffect } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { Nav, Card, Container } from "react-bootstrap";
-
-/* function DeliveryInformation() {
-  const [isMobile, setIsMobile] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); */
 
 function DeliveryInformation() {
   const [isMobile, setIsMobile] = useState(true);

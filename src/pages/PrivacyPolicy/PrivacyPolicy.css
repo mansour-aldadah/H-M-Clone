@@ -1,0 +1,25 @@
+.privacy-policy {
+  background-color: #faf9f8;
+  color: #222222;
+}
+
+.privacy-policy .container {
+  width: 100%;
+}
+.privacy-policy a {
+  font-size: 12px !important;
+}
+.privacy-policy h3 {
+  font-size: 20px;
+}
+.privacy-policy h5 {
+  font-size: 14px;
+}
+.privacy-policy p {
+  font-size: 12px;
+}
+
+.privacy-policy li {
+  list-style-position: inside;
+  font-size: 12px;
+}

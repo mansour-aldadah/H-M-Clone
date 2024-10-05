@@ -1,27 +1,24 @@
 .favorites-container {
-    text-align: center;
-    padding: 20px;
-    
-  }
-  
-  .favorites-message {
-    margin-top: 90px;
-    color: #888;
-    text-align: center;
+  text-align: center;
+  padding: 20px;
+}
 
-  }
-  
-  .btn-shop {
-    padding: 10px 20px;
-    margin-bottom: 200px;
-    font-size: 15px;
-    background-color: #000000;
-    border: none;
-    color: white;
-    cursor: pointer;
-    
-  }
-  
-  .btn-shop:hover {
-    background-color: #4e565e;
-  }
+.favorites-container .favorites-message {
+  margin-top: 90px;
+  color: #888;
+  text-align: center;
+}
+
+.favorites-container .btn-shop {
+  padding: 10px 20px;
+  margin-bottom: 200px;
+  font-size: 15px;
+  background-color: #000000;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.favorites-container .btn-shop:hover {
+  background-color: #4e565e;
+}

@@ -1,34 +1,30 @@
-
-.Delivery-Info{
-    margin: auto;
-    color: #333333;
+.Delivery-Info {
+  margin: auto;
+  color: #333333;
 }
 
-
-
-.heading h2{
-    font-size: 20px;
-    
+.Delivery-Info .heading h2 {
+  font-size: 20px;
 }
 
-.line{
-    border-bottom: 1px solid rgb(130, 130, 130);
-    opacity: 40%;
+.Delivery-Info .line {
+  border-bottom: 1px solid rgb(130, 130, 130);
+  opacity: 40%;
 }
 
-.subtitles{
-    font-size: 12px;
-    font-weight: 500;
-    opacity: 80%;
+.Delivery-Info .subtitles {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 80%;
 }
 
-.choices{
-    font-size: 12px;
-    font-weight: 500;
+.Delivery-Info .choices {
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.receive ul li{
-    font-size: 12px;
-    font-weight: 500;
-    opacity: 0.8;
+.Delivery-Info .receive ul li {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
 }

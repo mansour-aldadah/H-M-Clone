@@ -15,7 +15,7 @@ export default function WeeklyGiftCardsPage() {
   };
 
   return (
-    <section className="main p-0" dir="rtl">
+    <section className="weekly-gift-cards p-0" dir="rtl">
       <Container className="p-0 p-lg-5 text-center text-md-end">
         <Row className="first d-none d-md-flex mx-auto p-5 w-100 m-5">
           <Col md="6">

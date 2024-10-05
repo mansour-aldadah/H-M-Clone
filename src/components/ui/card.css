@@ -1,0 +1,7 @@
+/* .single-line-ellipsis {
+  width: 180px !important;
+  margin: auto !important;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */

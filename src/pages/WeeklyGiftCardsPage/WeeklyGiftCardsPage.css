@@ -1,76 +1,81 @@
-.main {
+.weekly-gift-cards {
   background-color: #faf9f8;
   color: #222222;
 }
 
-.first {
+.weekly-gift-cards .first {
   background-color: #f7fafe;
   width: 100%;
 }
 
-p {
+.weekly-gift-cards p {
   font-size: 13px;
 }
 
 @media screen and (max-width: 576px) {
-  .container {
+  .weekly-gift-cards .container {
     max-width: 100%;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .container {
+  .weekly-gift-cards .container {
     padding: 20px 10% !important;
   }
 }
 
-.buy {
+.weekly-gift-cards .buy {
   font-size: 13px;
 }
 
-.btn-outline-dark:hover {
+.weekly-gift-cards .btn-outline-dark:hover {
   background-color: #e4e4e4;
   color: #222222;
 }
 
-.card {
+.weekly-gift-cards .card {
   background-color: #e4e4e4;
 }
 
-.buy2:hover {
+.weekly-gift-cards .buy2:hover {
   background-color: #d0d0d0;
 }
 
-.card .h5 {
+.weekly-gift-cards .card .h5 {
   font-size: 16px !important;
 }
-.card p {
+.weekly-gift-cards .card p {
   font-size: 13px !important;
 }
 
-.desc {
+.weekly-gift-cards .desc {
   font-size: 14px !important;
 }
-.desc h5 {
+.weekly-gift-cards .desc h5 {
   font-size: 14px !important;
 }
 
-.accordion-item:first-of-type > .accordion-header .accordion-button,
-.accordion-item:last-of-type > .accordion-header .accordion-button {
+.weekly-gift-cards
+  .accordion-item:first-of-type
+  > .accordion-header
+  .accordion-button,
+.weekly-gift-cards
+  .accordion-item:last-of-type
+  > .accordion-header
+  .accordion-button {
   border-radius: 0 !important;
 }
 
-.accordion-button,
-.accordion-body {
+.weekly-gift-cards .accordion-button,
+.weekly-gift-cards .accordion-body {
   background-color: white !important;
 }
 
-.accordion-body p {
+.weekly-gift-cards .accordion-body p {
   font-size: 11px !important;
 }
 
-li {
+.weekly-gift-cards li {
   list-style-position: inside;
   font-size: 13px;
 }
-
