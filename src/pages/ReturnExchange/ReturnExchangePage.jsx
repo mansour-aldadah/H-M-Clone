@@ -1,20 +1,20 @@
 import { Row, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import Table from "react-bootstrap/Table";
-import "./ReturnExchangeStyle.css";
-import step1M from "./ReturnExchangeImages/imag1mobile.jpg";
-import step2M from "./ReturnExchangeImages/image2mobile.jpg";
-import step3M from "./ReturnExchangeImages/image3mobile.jpg";
-import step4M from "./ReturnExchangeImages/image4mobile.jpg";
-import step5M from "./ReturnExchangeImages/image5mobile.jpg";
-import step6M from "./ReturnExchangeImages/image6mobile.jpg";
-import step1B from "./ReturnExchangeImages/image1Browser.jpg";
-import step2B from "./ReturnExchangeImages/image2Browser.jpg";
-import step3B from "./ReturnExchangeImages/image3Browser.jpg";
-import step4B from "./ReturnExchangeImages/image4Browser.jpg";
-import step5B from "./ReturnExchangeImages/image5Browser.jpg";
-import step6B from "./ReturnExchangeImages/image6Browser.jpg";
+import step1M from "../../assets/ReturnExchangeImages/imag1mobile.jpg";
+import step2M from "../../assets/ReturnExchangeImages/image2mobile.jpg";
+import step3M from "../../assets/ReturnExchangeImages/image3mobile.jpg";
+import step4M from "../../assets/ReturnExchangeImages/image4mobile.jpg";
+import step5M from "../../assets/ReturnExchangeImages/image5mobile.jpg";
+import step6M from "../../assets/ReturnExchangeImages/image6mobile.jpg";
+import step1B from "../../assets/ReturnExchangeImages/image1Browser.jpg";
+import step2B from "../../assets/ReturnExchangeImages/image2Browser.jpg";
+import step3B from "../../assets/ReturnExchangeImages/image3Browser.jpg";
+import step4B from "../../assets/ReturnExchangeImages/image4Browser.jpg";
+import step5B from "../../assets/ReturnExchangeImages/image5Browser.jpg";
+import step6B from "../../assets/ReturnExchangeImages/image6Browser.jpg";
 import { useState, useEffect } from "react";
+import "./ReturnExchangeStyle.css";
 
 function ReturnExchange() {
   const [isMobile, setIsMobile] = useState(true);
@@ -33,7 +33,7 @@ function ReturnExchange() {
   }, []);
   return (
     <>
-      <div className="Delivery-Info col-lg-10 col-md-12">
+      <div className="returnExchange col-lg-10 col-md-12">
         <Row>
           <Col>
             <div className="Page-title">

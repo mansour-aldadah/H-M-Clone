@@ -3,15 +3,15 @@
   color: #000;
 }
 
-.container {
+.about-us .container {
   width: 100%;
   max-width: 1222px;
 }
 
-h1 {
+.about-us h1 {
   font-size: 32px !important;
 }
 
-h2 {
+.about-us h2 {
   font-size: 24px !important;
 }

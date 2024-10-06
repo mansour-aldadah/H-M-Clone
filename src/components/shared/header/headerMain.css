@@ -1,0 +1,9 @@
+.headerMain .custom-navbar {
+  display: block; /* Default display */
+}
+
+@media (max-width: 992px) {
+  .headerMain .custom-navbar {
+    display: none; /* Hide navbar on screens 992px and below */
+  }
+}

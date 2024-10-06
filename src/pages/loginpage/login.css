@@ -1,81 +1,78 @@
-* {
-    margin: 0;
-    padding: 0;
+.loginPage .left-div,
+.loginPage .right-div {
+  padding: 20px;
+  border: #842a2a;
+  /* Add a border around divs */
+}
+
+.loginPage .social-media-buttons {
+  display: block;
+  gap: 15px;
+  /* Space between icons */
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 0;
+  width: 70px;
+}
+
+.loginPage .social-media-buttons a {
+  color: #000;
+  /* Change color as needed */
+  text-decoration: none;
+}
+
+.loginPage .border-top-only {
+  border: none;
+  /* Remove all borders */
+  border-bottom: 1px solid rgb(0, 0, 0);
+  /* Add only top border */
+  border-radius: 0;
+  /* Remove border radius */
+  outline: none;
+  /* Remove outline on focus */
+  padding-top: 20px;
+}
+
+.loginPage .btn_style {
+  background-color: #000000;
+  color: white;
+  border-radius: 0;
+  /* padding: 10px 20px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.loginPage .row-style {
+  margin-top: 100px;
+  border-top: 0.5px solid #9f9292;
+}
+.loginPage .text-right {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.loginPage .row-style {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .loginPage .left-div,
+  .loginPage .right-div,
+  .loginPage .text-right {
+    text-align: center; /* Center text in tablet view */
   }
-  
-  .left-div,
-  .right-div {
-    padding: 20px;
-    border: #842a2a;
-    /* Add a border around divs */
-  
+  .loginPage .social-media-buttons {
+    width: 100%;
   }
-  
-  .social-media-buttons {
-    display: block;
-    gap: 15px;
-    /* Space between icons */
-    align-items: center;
-    margin-top: 10px;
-    border-radius: 0;
-    width: 70px;
-  }
-  
-  .social-media-buttons a {
-    color: #000;
-    /* Change color as needed */
-    text-decoration: none;
-  }
-  
-  .border-top-only {
-    border: none;
-    /* Remove all borders */
-    border-bottom: 1px solid rgb(0, 0, 0);
-    /* Add only top border */
-    border-radius: 0;
-    /* Remove border radius */
-    outline: none;
-    /* Remove outline on focus */
-    padding-top: 20px;
-  }
-  
-  .btn_style {
-    background-color: #000000;
-    color: white;
-    border-radius: 0;
-    /* padding: 10px 20px; */
+}
+@media (max-width: 576px) {
+  .loginPage .left-div,
+  .loginPage .right-div {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
   }
-  
-  .row-style {
-    
-    margin-top: 100px;
-    border-top: 0.5px solid #9f9292;
-  }
-  .text-right {
-    text-align: right;
-    margin-right: 20px;
-  }
-  
-  .row-style {
-    margin-top: 20px; 
-  }
-  
-  @media (max-width: 768px) {
-    .left-div, .right-div,.text-right {
-      text-align: center; /* Center text in tablet view */
-    }
-    .social-media-buttons{width: 100%;}
-  
-  }
-  @media (max-width: 576px) {
-    .left-div, .right-div {
-      text-align: center; 
-    }
-  }
+}

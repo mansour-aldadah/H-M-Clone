@@ -3,30 +3,30 @@
   color: #222222;
 }
 
-.container {
+.purchase-terms .container {
   max-width: 1026px;
 }
 
-h3 {
+.purchase-terms h3 {
   font-size: 20px;
 }
-h5 {
+.purchase-terms h5 {
   font-size: 14px;
 }
-p {
+.purchase-terms p {
   font-size: 12px;
 }
 
-ul li {
+.purchase-terms ul li {
   list-style-position: inside;
 }
 
-th {
+.purchase-terms th {
   background-color: transparent !important;
   font-size: 16px;
 }
 
-td {
+.purchase-terms td {
   font-size: 13px;
   background-color: transparent !important;
 }

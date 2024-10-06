@@ -3,33 +3,33 @@
   color: #222222;
 }
 
-.container {
+.not-found .container {
   background-color: #f2f2f2;
   padding: 50px 120px;
   max-width: 1250px;
 }
 
-h5 {
+.not-found h5 {
   font-size: 14px;
 }
-p {
+.not-found p {
   font-size: 12px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .container {
+  .not-found .container {
     padding: 50px 30px;
   }
 }
 
 @media (max-width: 767px) {
-  .container {
+  .not-found .container {
     padding: 50px 30px;
   }
 }
-.carousel-item {
+.not-found .carousel-item {
   transition: transform 0.2s ease-in-out !important;
 }
-.carousel {
+.not-found .carousel {
   background-color: white !important;
 }

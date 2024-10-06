@@ -4,10 +4,13 @@ import { Container, Carousel, Button, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import ProductCard from "../../components/ui/card";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 
 export default function NotFound() {
   const [products, setProducts] = useState([]);
-
+  const [lang, setLang] = useContext(langContext);
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
@@ -46,9 +49,15 @@ export default function NotFound() {
   return (
     <section className="not-found text-center">
       <Container className="">
-        <h5>عذراً، لم يتم العثور على الصفحة التي تبحث عنها.</h5>
+        <h5>
+          {lang == "ar"
+            ? StringManager.notFoundTitle.ar
+            : StringManager.notFoundTitle.en}
+        </h5>
         <h3 className="mb-4 mt-3">
-          لكن لدينا الكثير من المنتجات المختارة بعناية والتي ستعشقونها.
+          {lang == "ar"
+            ? StringManager.notFoundSubTitle.ar
+            : StringManager.notFoundSubTitle.en}
         </h3>
         <Carousel
           className="p-1 p-sm-5"

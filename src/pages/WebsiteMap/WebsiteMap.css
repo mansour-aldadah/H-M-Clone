@@ -3,19 +3,19 @@
   color: #222222;
 }
 
-.container {
+.website-map .container {
   max-width: 1200px !important;
 }
 
-h3 {
+.website-map h3 {
   font-size: 20px;
 }
-h5 {
+.website-map h5 {
   font-size: 14px;
 }
-p {
+.website-map p {
   font-size: 12px;
 }
-hr {
+.website-map hr {
   opacity: 1;
 }

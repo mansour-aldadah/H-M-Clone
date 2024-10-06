@@ -7,7 +7,11 @@ import footerImage from "../../../assets/footerImages/h-m-logo-bw.svg";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io";
 import { IoLogoFacebook } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
+  const navigate = useNavigate();
+
   const [activeKey, setActiveKey] = useState(null);
 
   // Toggle the active state
@@ -29,42 +33,49 @@ export default function Footer() {
                 <div className="d-inline-block links text-lg-end">
                   <h6>حول اتش آند ام</h6>
                   <a
+                    onClick={() => navigate("/AboutUs")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     معلومات عنا
                   </a>
                   <a
+                    onClick={() => navigate("/DeliveryInformation")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     معلومات التوصيل
                   </a>
                   <a
+                    onClick={() => navigate("/PurchaseTerms")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    معلومات التوصيل
+                    شروط وأحكام الشراء{" "}
                   </a>
                   <a
+                    onClick={() => navigate("/Terms")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     شروط وأحكام الموقع
                   </a>
                   <a
+                    onClick={() => navigate("/PrivacyPolicy")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     سياسة الخصوصية
                   </a>
                   <a
+                    onClick={() => navigate("/ReturnExchange")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     الإرجاع والاستبدال
                   </a>
                   <a
+                    onClick={() => navigate("/Sustainability")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
@@ -76,42 +87,49 @@ export default function Footer() {
                 <div className="links">
                   <h6>خدمة الزبائن</h6>
                   <a
+                    onClick={() => navigate("/Questions")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     الأسئلة المتكررة
                   </a>
                   <a
+                    onClick={() => navigate("/ContactUs")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     اتصل بنا
                   </a>
                   <a
+                    // onClick={() => navigate("/")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     التواصل عبر واتساب
                   </a>
                   <a
+                    onClick={() => navigate("/WebsiteMap")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     خريطة الموقع
                   </a>
                   <a
+                    onClick={() => navigate("/location")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     محلاتنا
                   </a>
                   <a
+                    onClick={() => navigate("/Lighting")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
                     أثاث وإضاءة اتش آند ام هوم
                   </a>
                   <a
+                    onClick={() => navigate("/WeeklyGiftCardsPage")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
@@ -137,42 +155,49 @@ export default function Footer() {
                 <Accordion.Body className="py-0">
                   <div className="d-inline-block links text-lg-end">
                     <a
+                      onClick={() => navigate("/AboutUs")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       معلومات عنا
                     </a>
                     <a
+                      onClick={() => navigate("/DeliveryInformation")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       معلومات التوصيل
                     </a>
                     <a
+                      onClick={() => navigate("/PurchaseTerms")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      معلومات التوصيل
+                      شروط وأحكام الشراء
                     </a>
                     <a
+                      onClick={() => navigate("/Terms")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       شروط وأحكام الموقع
                     </a>
                     <a
+                      onClick={() => navigate("/PrivacyPolicy")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       سياسة الخصوصية
                     </a>
                     <a
+                      onClick={() => navigate("/ReturnExchange")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       الإرجاع والاستبدال
                     </a>
                     <a
+                      onClick={() => navigate("/Sustainability")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
@@ -193,42 +218,49 @@ export default function Footer() {
                 <Accordion.Body className="py-0">
                   <div className="links d-inline-block text-lg-end">
                     <a
+                      onClick={() => navigate("/Questions")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       الأسئلة المتكررة
                     </a>
                     <a
+                      onClick={() => navigate("/ContactUs")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       اتصل بنا
                     </a>
                     <a
+                      onClick={() => navigate("/")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       التواصل عبر واتساب
                     </a>
                     <a
+                      // onClick={() => navigate("/")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       خريطة الموقع
                     </a>
                     <a
+                      onClick={() => navigate("/location")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       محلاتنا
                     </a>
                     <a
+                      onClick={() => navigate("/Lighting")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
                       أثاث وإضاءة اتش آند ام هوم
                     </a>
                     <a
+                      onClick={() => navigate("/WeeklyGiftCardsPage")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >

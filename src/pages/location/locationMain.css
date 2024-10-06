@@ -1,130 +1,131 @@
-
-.container-fluid {
-    padding: 20px;
+.locationMain .container-fluid {
+  padding: 20px;
 }
-span{padding-left: 20px;}
+.locationMain span {
+  padding-left: 20px;
+}
 /* Sidebar styling */
-.sidebar {
-    border-right: 1px solid #ddd;
-    margin-left: 100px;
-    height: 100vh;
-    overflow-y: auto;
-    text-align: right;
+.locationMain .sidebar {
+  border-right: 1px solid #ddd;
+  margin-left: 100px;
+  height: 100vh;
+  overflow-y: auto;
+  text-align: right;
 }
 
-.search-bar {
-    display: flex;
-    justify-content: space-evenly;
+.locationMain .search-bar {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.search-bar input {
-    width: 70%;
+.locationMain .search-bar input {
+  width: 70%;
 }
 
-.back-button {
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.locationMain .back-button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.back-button:hover {
-    background-color: #555;
+.locationMain .back-button:hover {
+  background-color: #555;
 }
 
 /* List of letters in the sidebar */
-.letter-list {
-    font-size: 24px;
-    padding-bottom: 10px;
+.locationMain .letter-list {
+  font-size: 24px;
+  padding-bottom: 10px;
 }
 
-.letter-item {
-    margin-bottom: 20px;
-    font-weight: bold;
+.locationMain .letter-item {
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 /* Make the layout stack vertically on mobile */
 @media (max-width: 768px) {
-    .search-bar input {
-        width: 100%;
-    }
+  .locationMain .search-bar input {
+    width: 100%;
+  }
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-    }
+  .locationMain .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
 
-    .content {
-        width: 100%;
-    }
-
-  
+  .locationMain .content {
+    width: 100%;
+  }
 }
 
-a {
-    font-size: 12px;
-    text-decoration: none;
-    color: rgb(118, 105, 105);
+.locationMain a {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(118, 105, 105);
 }
 
-p {
-    font-size: 12px;
-    text-align: right;
+.locationMain p {
+  font-size: 12px;
+  text-align: right;
 }
 
-.hover-col {
-    transition: background-color 0.3s ease;
+.locationMain .hover-col {
+  transition: background-color 0.3s ease;
 }
 
-.hover-col:hover {
-    background-color: black;
+.locationMain .hover-col:hover {
+  background-color: black;
 }
 
-.hover-col:hover a {
-    color: white;
+.locationMain .hover-col:hover a {
+  color: white;
 }
 
-.hover-col:hover a .fa-icon {
-    color: white;
+.locationMain .hover-col:hover a .fa-icon {
+  color: white;
 }
 
-h4 {
-    text-align: right;
+.locationMain h4 {
+  text-align: right;
 }
 
-span {
-    padding-bottom: 3rem;
+.locationMain span {
+  padding-bottom: 3rem;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-    .container-fluid {
-        padding: 15px;
-    }
+  .locationMain .container-fluid {
+    padding: 15px;
+  }
 
-    .sidebar {
-        margin-left: 50px;
-        height: 100vh;
-        padding: 10px;
-    }
+  .locationMain .sidebar {
+    margin-left: 50px;
+    height: 100vh;
+    padding: 10px;
+  }
 
-    .search-bar {
-        flex-direction: row;
-        align-items: center;
-    }
+  .locationMain .search-bar {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .search-bar input {
-        width: 100%;
-    }
+  .locationMain .search-bar input {
+    width: 100%;
+  }
 
-    .search-bar button {
-        margin: 0 5px;
-    }
+  .locationMain .search-bar button {
+    margin: 0 5px;
+  }
 
-    .back-button {
-        padding: 10px 20px;
-    }
+  .locationMain .back-button {
+    padding: 10px 20px;
+  }
 }
 
-.red{color: red;}
+.locationMain .red {
+  color: red;
+}

@@ -1,0 +1,27 @@
+.returnExchange {
+  margin: auto;
+  color: #333333;
+}
+.returnExchange .heading h2 {
+  font-size: 20px;
+}
+
+.returnExchange .line {
+  border-bottom: 1px solid rgb(130, 130, 130);
+  opacity: 40%;
+}
+
+.returnExchange ul li {
+  padding-bottom: 10px;
+}
+.returnExchange ul li a {
+  color: #333333;
+  font-weight: bold;
+}
+
+.returnExchange Table th {
+  text-align: center;
+}
+.returnExchange Table td {
+  text-align: center;
+}

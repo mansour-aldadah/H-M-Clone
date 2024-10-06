@@ -2,21 +2,21 @@
   background-color: #faf9f8;
   color: #222222;
 }
-h5 {
+.all-products h5 {
   font-size: 16px;
 }
-h5:hover {
+.all-products h5:hover {
   text-decoration: underline;
   color: #c9002e !important;
   cursor: pointer;
 }
-p {
+.all-products p {
   font-size: 13px;
 }
-p a {
+.all-products p a {
   font-size: 13px;
 }
-p a:hover {
+.all-products p a:hover {
   text-decoration: underline;
   color: #c9002e !important;
 }

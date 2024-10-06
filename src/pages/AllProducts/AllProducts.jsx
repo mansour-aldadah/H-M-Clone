@@ -68,6 +68,6 @@ export default function AllProducts() {
           </Row>
         </Container>
       </section>
-    </>
+    </> 
   );
 }

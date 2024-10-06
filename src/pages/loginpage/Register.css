@@ -1,17 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.left-div,
-.right-div {
+.registerPage .left-div,
+.registerPage .right-div {
   padding: 20px;
   border: #842a2a;
   /* Add a border around divs */
-
 }
 
-.social-media-buttons {
+.registerPage .social-media-buttons {
   display: block;
   gap: 15px;
   /* Space between icons */
@@ -21,13 +15,13 @@
   width: 300px;
 }
 
-.social-media-buttons a {
+.registerPage .social-media-buttons a {
   color: #000;
   /* Change color as needed */
   text-decoration: none;
 }
 
-.border-top-only {
+.registerPage .border-top-only {
   border: none;
   /* Remove all borders */
   border-bottom: 1px solid rgb(0, 0, 0);
@@ -39,7 +33,7 @@
   padding-top: 20px;
 }
 
-.btn_style {
+.registerPage .btn_style {
   background-color: #000000;
   color: white;
   border-radius: 0;
@@ -53,28 +47,31 @@
   border-radius: 5px;
 }
 
-.row-style {
-  
+.registerPage .row-style {
   margin-top: 100px;
   border-top: 0.5px solid #9f9292;
 }
-.text-right {
+.registerPage .text-right {
   text-align: right;
   margin-top: 20px;
 }
 
-.row-style {
-  margin-top: 20px; 
+.registerPage .row-style {
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-  .left-div, .right-div {
+  .registerPage .left-div,
+  .registerPage .right-div {
     text-align: center; /* Center text in tablet view */
   }
-  .social-media-buttons{width: 100%;}
+  .registerPage .social-media-buttons {
+    width: 100%;
+  }
 }
 @media (max-width: 576px) {
-  .left-div, .right-div {
-    text-align: center; 
+  .registerPage .left-div,
+  .registerPage .right-div {
+    text-align: center;
   }
 }

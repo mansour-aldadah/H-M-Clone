@@ -3,23 +3,23 @@
   color: #222222;
 }
 
-.container {
+.privacy-policy .container {
   width: 100%;
 }
-a {
+.privacy-policy a {
   font-size: 12px !important;
 }
-h3 {
+.privacy-policy h3 {
   font-size: 20px;
 }
-h5 {
+.privacy-policy h5 {
   font-size: 14px;
 }
-p {
+.privacy-policy p {
   font-size: 12px;
 }
 
-li {
+.privacy-policy li {
   list-style-position: inside;
   font-size: 12px;
 }
