@@ -14,9 +14,9 @@ export default function App() {
 
   return (
     <>
-      <langContext.Provider value={[lang, setLang]}>
+      {/*   <langContext.Provider value={[lang, setLang]}>
         <HeaderMain />
-      </langContext.Provider>
+      </langContext.Provider> */}
       {/*  
       
       <Footer /> */}
