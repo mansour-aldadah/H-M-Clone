@@ -4,7 +4,7 @@ import "./AboutUs.css";
 
 export default function AboutUs() {
   return (
-    <section className="about-us py-5" dir="rtl">
+    <section className="about-us py-5">
       <Container>
         <div className="main text-center">
           <h1>مجموعة اتش آند ام</h1>

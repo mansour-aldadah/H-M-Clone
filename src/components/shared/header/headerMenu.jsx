@@ -1,15 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, Form, FormControl } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaHeart, FaShoppingBag, FaSearch } from "react-icons/fa";
 import SearchPage from "./searchPage";
 import "./headerMenu.css";
 import HM from "../../../assets/images/logos/HM.png";
+import axios from "axios";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const HeaderMenu = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [expanded, setExpanded] = useState(false);
   const [showSearchPage, setShowSearchPage] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
+  const CategoriesLoader = useLoaderData();
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("https://dummyjson.com/products");
+        setProducts(response.data.products);
+
+        // Extract unique categories
+        const allCategories = response.data.products.map(
+          (product) => product.category
+        );
+        const uniqueCategories = [...new Set(allCategories)]; // Use Set to get unique categories
+        setCategories(uniqueCategories);
+      } catch (error) {
+        console.error("Error fetching products:", error.message);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleNavLinkClick = (link) => {
     setActiveLink(link);
@@ -40,11 +65,6 @@ const HeaderMenu = () => {
             fluid
             className="d-flex align-items-center justify-content-between"
           >
-            {/* Replace Form with search icon for mobile/tablet
-           <div className="d-flex align-items-center">
-            <FaSearch size={24} onClick={handleSearchClick} style={{ cursor: 'pointer' }} />
-          </div>
-         */}
             <Form className="d-flex align-items-center">
               <FormControl
                 type="search"
@@ -84,34 +104,13 @@ const HeaderMenu = () => {
             />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto justify-content-center w-100 flex-column flex-lg-row">
-                {[
-                  "sale",
-                  "sport",
-                  "h-m-home",
-                  "children",
-                  "baby",
-                  "men",
-                  "women"
-                ].map((item) => (
+                {categories.map((category) => (
                   <Nav.Link
-                    key={item}
-                    href={`#${item}`}
-                    onClick={() => handleNavLinkClick(item)}
+                    key={category}
+                    onClick={() => navigate(`/${category}`)}
                     className="nav-link-hover"
                   >
-                    {item === "sale"
-                      ? "تنزيلات"
-                      : item === "sport"
-                      ? "الملابس الرياضيه"
-                      : item === "h-m-home"
-                      ? "اتش اند ام هوم"
-                      : item === "children"
-                      ? "الاطفال"
-                      : item === "baby"
-                      ? "الرضع"
-                      : item === "men"
-                      ? "الرجال"
-                      : "النساء"}
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
                   </Nav.Link>
                 ))}
               </Nav>

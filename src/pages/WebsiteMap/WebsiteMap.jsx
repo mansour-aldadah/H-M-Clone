@@ -40,7 +40,7 @@ export default function WebsiteMap() {
 
   return (
     <>
-      <section className="website-map py-5 px-4" dir="rtl">
+      <section className="website-map py-5 px-4">
         <Container>
           <h3 className="p-0 m-0">خريطة الموقع</h3>
           <hr className="mt-2" />

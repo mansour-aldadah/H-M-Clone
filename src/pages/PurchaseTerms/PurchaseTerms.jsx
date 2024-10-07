@@ -5,7 +5,7 @@ import Table from "react-bootstrap/Table";
 
 export default function PurchaseTerms() {
   return (
-    <section className="purchase-terms" dir="rtl">
+    <section className="purchase-terms">
       <Container className="p-3 m-auto">
         <h3 className="p-0 m-0">شروط وأحكام الشراء</h3>
         <hr className="mt-2" />

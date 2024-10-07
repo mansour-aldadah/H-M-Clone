@@ -3,7 +3,7 @@ import "./PrivacyPolicy.css";
 
 export default function PrivacyPolicy() {
   return (
-    <section className="privacy-policy py-5 px-4" dir="rtl">
+    <section className="privacy-policy py-5 px-4">
       <h3 className="p-0 m-0">سياسة الخصوصية</h3>
       <hr className="mt-2" />
       <div className="policy">

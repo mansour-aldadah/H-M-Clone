@@ -261,6 +261,85 @@ question11Branche13:{en:"•    Dokki Shooting Club Street", ar:"• الدقي�
     // Not Found page
     notFoundTitle:{en:"Sorry, we couldn't find the page you're trying to reach.", ar:"عذراً، لم يتم العثور على الصفحة التي تبحث عنها."},
     notFoundSubTitle:{en:"But we've hand-picked the pieces below which you'll love.", ar:"لكن لدينا الكثير من المنتجات المختارة بعناية والتي ستعشقونها."},
+
+    // Footer
+    footerTitle:{en:"Corporate Info", ar:"حول اتش آند ام"},
+    aboutUs:{en:"About Us", ar:"معلومات عنا"},
+    delivery:{en:"Delivery Information", ar:"معلومات التوصيل"},
+    termsSale:{en:"Terms and Conditions of Sale", ar:"شروط وأحكام الشراء"},
+    webTerms:{en:"Website Terms & Conditions", ar:"شروط وأحكام الموقع"},
+    privacyPolicy:{en:"Privacy Policy", ar:"سياسة الخصوصية"},
+    returns:{en:"Returns & Refunds", ar:"الإرجاع والإستبدال"},
+    sustain:{en:"Sustaunability", ar:"الإستدامة"},
+
+    customerService:{en:"Customer Service", ar:"خدمة الزبائن"},
+    faq:{en:"FAQs", ar:"الأسئلة المتكررة"},
+    contactUs:{en:"Contact Us", ar:" اتصل بنا"},
+    whatsApp:{en:"Connect via WhatsApp", ar:"التواصل عبر الواتساب"},
+    siteMap:{en:"Sitemap", ar:"خريطة الموقع"},
+    stores:{en:"Stores", ar:"محلاتنا"},
+    furniture:{en:"H&M Home Furniture & Lighting", ar:"أثاث وإضاء اتش آند أم هوم"},
+    eGift:{en:"eGifts Cards", ar:"بطاقة الهدايا الإلكترونية"},
+
+    news:{en:"Newsletter", ar:"تواصل معنا"},
+    newsSub:{en:"Be the first to know about our newest arrivals, special offers and store events near you.", ar:"كن أول المطلعين على التشكيلات الجديدة و العروض الحصرية والفعاليات في المحلات القريبة منك"},
+    signUpnews:{en:"Sign up ", ar:"سجل الآن"},
+    emailNews:{en:"Enter your Email address", ar:"أدخل بريدك الإلكتروني "},
+
+    tailtitle:{en:"Customer Service", ar:"خدمة العملاء"},
+    tailFor:{en:"For Egypt 02-24803822", ar:"مصر 24803822-02"},
+    tailCont:{en:"We are open 7 days a week from 9:00 AM to 2:30 PM and from 7:00 PM to 10:30 PM (Egypt local time, GMT +3)", ar:"أوقات العمل أيام السبت إلى الخميس من الساعة 9 صباحاً إلى 10 مساءً و أيام الجمعة من الساعة 1 مساءً إلى 10 مساءً. (بتوقيت مصر)"},
+
+    endCont:{en:"© H&M's business concept is to offer fashion and quality at the best price in a sustainable way. H&M has since it was founded in 1947 grown into one of the world's leading fashion companies. The content of this site is copyright-protected and is the property of H&M Hennes & Mauritz AB.", ar:"مفهوم الأعمال لدى H&M هو تقديم أحدث صيحات الموضة والجودة العالية بأفضل الأسعار. ومنذ تأسيس H&M في عام 1947 نمت لتصبح واحدة من شركات الأزياء الرائدة في العالم. حقوق النشر محفوظة لموقع شركة H&M و هو مُلك Hennes H&M & Mauritz AB ©"},
+    egypt:{en:"Egypt", ar:"مصر"},
+
+
+    // location page
+    locationTitle:{en:"Store Finder", ar:" محلاتنا"},
+    findStores:{en:"FIND STORES", ar:"البحث عن محلاتنا"},
+    nearMe:{en:"Near me", ar:"المحلات القريبة مني"},
+    findNear:{en:"Find Stores Near", ar:"البحث عن أقرب المحلات إليك"},
+    listView:{en:"LIST VIEW", ar:"عرض القائمة"},
+    mapView:{en:"MAP VIEW", ar:"عرض الخريطة"},
+    selectStore:{en:"select a store to see details", ar:"اختر محل للإطلاع على التفاصيل"},
+
+/*     a:{en:"A", ar:"ك"},
+    p:{en:"P", ar:"ب"},
+    m:{en:"M", ar:"م"},
+    h:{en:"H", ar:"س"},
+    c:{en:"C", ar:"ك"},
+
+    aCont:{en:"Alexandria City Center, Alexandria", ar:"كايرو فيستفال سيتي"}, */
+
+    // Product Details Page
+    currency:{en:"EGP", ar:"ج.م"},
+    vAT:{en:"Inclusive of VAT", ar:"شامل ضريبة القيمة المضافة"},
+    sameDay:{en:"Same Day Delivery Available", ar:" التوصيل في نفس اليوم متاح"},
+    writeRev:{en:"Write a review", ar:"كتابة مراجعة"},
+    addToBs:{en:"ADD TO BASKET", ar:"أضف إلى الحقيبة"},
+    addToFv:{en:"ADD TO FAVOURITES", ar:"أضف إلى المنتجات المفضلة"},
+    returnSer:{en:" Free online returns within 14 days", ar:"خدمة الإرجاع المجاني أونلاين متوفرة حتى 14 يوماً"},
+    explore:{en:"Explore the delivery options applicable to your area.", ar:"اكتشف خيارات التوصيل المتاحة في منطقتك"},
+    clickC:{en:"Available to collect in 2-5 days", ar:"استلم طلبيتك من المحل خلال 2-5 يوم"},
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 

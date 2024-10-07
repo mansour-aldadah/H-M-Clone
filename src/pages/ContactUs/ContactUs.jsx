@@ -18,7 +18,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="call-us" dir="rtl">
+    <section className="call-us">
       <Container className="py-3">
         <div className="call-us-main">
           <h3 className="p-0 m-0">اتصل بنا</h3>

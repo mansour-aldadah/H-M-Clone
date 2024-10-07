@@ -1,27 +1,27 @@
-.loginPage .left-div,
-.loginPage .right-div {
+.registerPage .left-div,
+.registerPage .right-div {
   padding: 20px;
   border: #842a2a;
   /* Add a border around divs */
 }
 
-.loginPage .social-media-buttons {
+.registerPage .social-media-buttons {
   display: block;
   gap: 15px;
   /* Space between icons */
   align-items: center;
   margin-top: 10px;
   border-radius: 0;
-  width: 70px;
+  width: 300px;
 }
 
-.loginPage .social-media-buttons a {
+.registerPage .social-media-buttons a {
   color: #000;
   /* Change color as needed */
   text-decoration: none;
 }
 
-.loginPage .border-top-only {
+.registerPage .border-top-only {
   border: none;
   /* Remove all borders */
   border-bottom: 1px solid rgb(0, 0, 0);
@@ -33,7 +33,7 @@
   padding-top: 20px;
 }
 
-.loginPage .btn_style {
+.registerPage .btn_style {
   background-color: #000000;
   color: white;
   border-radius: 0;
@@ -47,32 +47,31 @@
   border-radius: 5px;
 }
 
-.loginPage .row-style {
+.registerPage .row-style {
   margin-top: 100px;
   border-top: 0.5px solid #9f9292;
 }
-.loginPage .text-right {
+.registerPage .text-right {
   text-align: right;
-  margin-right: 20px;
+  margin-top: 20px;
 }
 
-.loginPage .row-style {
+.registerPage .row-style {
   margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-  .loginPage .left-div,
-  .loginPage .right-div,
-  .loginPage .text-right {
+  .registerPage .left-div,
+  .registerPage .right-div {
     text-align: center; /* Center text in tablet view */
   }
-  .loginPage .social-media-buttons {
+  .registerPage .social-media-buttons {
     width: 100%;
   }
 }
 @media (max-width: 576px) {
-  .loginPage .left-div,
-  .loginPage .right-div {
+  .registerPage .left-div,
+  .registerPage .right-div {
     text-align: center;
   }
 }

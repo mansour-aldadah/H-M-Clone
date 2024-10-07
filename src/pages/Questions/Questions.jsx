@@ -10,9 +10,7 @@ export default function Questions() {
     <section className="questions py-5 px-4" dir="rtl">
       <h3 className="p-0 m-0">
         {" "}
-        {lang == "ar"
-          ? StringManager.questions.ar
-          : StringManager.questions.en}{" "}
+        {lang == "ar" ? StringManager.questions.ar : StringManager.questions.en}
       </h3>
       <hr className="mt-2" />
 

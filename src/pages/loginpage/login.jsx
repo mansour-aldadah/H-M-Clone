@@ -5,9 +5,14 @@ import "./register.css"; // Import your custom CSS file
 import { useContext } from "react";
 import langContext from "../../services/context/langContext";
 import StringManager from "../../resources/stringManager";
+import "./Register.css"; // Import your custom CSS file
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [lang, setLang] = useContext(langContext);
+
+  const navigate = useNavigate();
+
   return (
     <section className="loginPage">
       <div className=" mb-4">
@@ -18,7 +23,7 @@ const LoginPage = () => {
               : StringManager.loginTitle.en}
           </strong>
         </h4>
-        <Container fluid className="d-flex " dir="rtl">
+        <Container fluid className="d-flex ">
           <Row className="w-100 row-style justify-content-center">
             <Col md={6} className="left-div">
               <p>
@@ -65,7 +70,14 @@ const LoginPage = () => {
                     ? StringManager.signInButton.ar
                     : StringManager.signInButton.en}
                 </Button>
+
                 <a href="/forgotpassword">
+                  {lang == "ar"
+                    ? StringManager.forgotPasswordLink.ar
+                    : StringManager.forgotPasswordLink.en}
+                </a>
+
+                <a onClick={() => navigate(`/forgetpassword`)}>
                   {lang == "ar"
                     ? StringManager.forgotPasswordLink.ar
                     : StringManager.forgotPasswordLink.en}
@@ -117,7 +129,8 @@ const LoginPage = () => {
                   variant="outline-dark"
                   className="mb-2 social-media-buttons "
                   // style={{ width: '100%'  }}
-                  onClick={() => (window.location.href = "/register")}
+
+                  onClick={() => navigate(`/register`)}
                 >
                   {lang == "ar"
                     ? StringManager.signUpLink.ar

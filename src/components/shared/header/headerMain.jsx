@@ -21,7 +21,7 @@ const HeaderMain = () => {
                 setLang(lang === "ar" ? "en" : "ar");
               }}
             >
-              {lang}
+              {lang === "ar" ? "English" : "العربية"}
             </Nav.Link>
             <Nav.Link href="/location">
               {lang == "ar" ? StringManager.find.ar : StringManager.find.en}
@@ -37,36 +37,6 @@ const HeaderMain = () => {
                 ? StringManager.register.ar
                 : StringManager.register.en}{" "}
             </Nav.Link>
-
-            {/* <button
-              onClick={() => {
-                console.log("Switching language from", lang); // Check language before switching
-                setLang(lang === "ar" ? "en" : "ar");
-                console.log("Language switched to:", lang);
-              }}
-            >
-              {" "}
-              {lang === "ar" ? "English" : "العربية"}
-            </button>
-
-            <Link to="/location">
-              {" "}
-              {lang == "ar"
-                ? StringManager.find.ar
-                : StringManager.find.en}{" "}
-            </Link>
-
-            <Nav.Link href="#login">
-              {" "}
-              {lang == "ar"
-                ? StringManager.login.ar
-                : StringManager.login.en}{" "}
-            </Nav.Link>
-            <Nav.Link href="#register">
-              {lang == "ar"
-                ? StringManager.register.ar
-                : StringManager.register.en}
-            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,13 +1,18 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebook, FaGoogle } from "react-icons/fa"; // Importing social media icons
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./register.css"; // Import your custom CSS file
 import { useContext } from "react";
 import langContext from "../../services/context/langContext";
 import StringManager from "../../resources/stringManager";
+import "./Register.css"; // Import your custom CSS file
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [lang, setLang] = useContext(langContext);
+  const navigate = useNavigate();
+
   return (
     <section className="registerPage">
       <div className=" mb-4">
@@ -18,7 +23,7 @@ const RegisterPage = () => {
               : StringManager.registerPageTitle.en}{" "}
           </strong>
         </h3>
-        <Container fluid className="d-flex " dir="rtl">
+        <Container fluid className="d-flex ">
           <Row className="w-100 row-style justify-content-center">
             <Col md={6} className="left-div">
               <p>
@@ -78,7 +83,10 @@ const RegisterPage = () => {
                     ? StringManager.termsAndConditions.ar
                     : StringManager.termsAndConditions.en}
                   &nbsp;
-                  <a href="/Terms">
+                  <a
+                    onClick={() => navigate(`/Terms`)}
+                    style={{ cursor: "pointer" }}
+                  >
                     {lang == "ar"
                       ? StringManager.termsAndConditionsLink.ar
                       : StringManager.termsAndConditionsLink.en}
@@ -86,7 +94,10 @@ const RegisterPage = () => {
                   </a>
                   {lang == "ar" ? StringManager.and.ar : StringManager.and.en}
                   &nbsp;
-                  <a href="/PrivacyPolicy">
+                  <a
+                    onClick={() => navigate(`/PrivacyPolicy`)}
+                    style={{ cursor: "pointer" }}
+                  >
                     {lang == "ar"
                       ? StringManager.privacyAndPolicyLink.ar
                       : StringManager.privacyAndPolicyLink.en}
@@ -148,7 +159,7 @@ const RegisterPage = () => {
                   variant="outline-dark"
                   className="mb-2 social-media-buttons "
                   // style={{ width: '100%'  }}
-                  onClick={() => (window.location.href = "/login")}
+                  onClick={() => navigate(`/login`)}
                 >
                   {lang == "ar"
                     ? StringManager.signInButton.ar

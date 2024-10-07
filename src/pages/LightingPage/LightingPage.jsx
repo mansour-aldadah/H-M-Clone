@@ -4,7 +4,7 @@ import EnergyImage from "../../assets/LightingImages/Energy label_1.jpg";
 
 export default function LightingPage() {
   return (
-    <section className="lighting px-4 py-3" dir="rtl">
+    <section className="lighting px-4 py-3">
       <div className="sec">
         <h5>اتش آند ام هوم</h5>
         <p className="text-muted fw-bold">

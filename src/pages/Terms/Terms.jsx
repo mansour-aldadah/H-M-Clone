@@ -3,7 +3,7 @@ import "./Terms.css";
 export default function terms() {
   return (
     <>
-      <section className="terms py-5 px-4" dir="rtl">
+      <section className="terms py-5 px-4">
         <h3 className="p-0 m-0">الشروط و الأحكام</h3>
         <hr className="mt-2" />
         <p className="text-muted fw-normal m-0 p-0">

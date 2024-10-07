@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +8,11 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+<<<<<<< HEAD
   text-align: center; 
  } */
+=======
+     text-align: center; 
+ }
+ */
+>>>>>>> 45de288d567adba30516b326a9cfcd9b1cb54eb1
