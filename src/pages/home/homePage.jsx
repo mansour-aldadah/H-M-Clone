@@ -8,9 +8,13 @@ import image3 from "./HomePageImages/image3.jpg";
 import image4 from "./HomePageImages/image4.0.jpg";
 import image41 from "./HomePageImages/image4.1.jpg";
 import image5 from "./HomePageImages/image5.jpg";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 
 function HomePage() {
   const [isMobile, setIsMobile] = useState(true);
+  const [lang, setLang] = useContext(langContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,242 +31,329 @@ function HomePage() {
 
   return (
     <>
-      <section className="homePage">
-        <div className="Root-1">
-          <div className="home-content">
-            <Row>
-              <Col>
-                <div className="campaign-container col-lg-10 col-md-12 ">
-                  {isMobile ? (
-                    <Carousel className="pb-2">
-                      <Carousel.Item className="C-Item">
-                        <a href="#">
-                          التوصيل المجاني للطلبيات الأكثر من 1999 ج.م
-                        </a>
-                      </Carousel.Item>
-                      <Carousel.Item className="C-Item">
-                        <a href="#">
-                          خدمة الإرجاع مجاناً متوفرة أونلاين وفي المحلات
-                        </a>
-                      </Carousel.Item>
-                      <Carousel.Item className="C-Item">
-                        <a href="#">تسوق اونلاين 24/7</a>
-                      </Carousel.Item>
-                    </Carousel>
-                  ) : (
-                    <div className="d-flex D-SH pb-4">
-                      <div>
-                        <a href="#">
-                          التوصيل المجاني للطلبيات الأكثر من 1999 ج.م
-                        </a>
-                      </div>
-                      <div>
-                        <a href="#">
-                          خدمة الإرجاع مجاناً متوفرة أونلاين وفي المحلات
-                        </a>
-                      </div>
-                      <div>
-                        <a href="#">تسوق اونلاين 24/7</a>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <div className="campaign-container col-lg-10 col-md-12 ">
-                  {isMobile ? (
-                    <div className="campaign-mobile">
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image2} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox-mobile">
-                        <div className="campaign-heading-hp-mobile">
-                          <a href="#">تشكيلة خريف/شتاء 2024</a>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image1} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox">
-                        <div className="campaign-first-heading-hp pb-5">
-                          <a href="#">تشكيلة خريف/شتاء 2024</a>
-                        </div>
-
-                        <div className="campaign-btn">
-                          <a href="#">تسوقوا الآن</a>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </Col>
-            </Row>
-
-            <Row className="pt-4">
-              <Col>
-                <div className="campaign-container col-lg-10 col-md-12 ">
-                  {isMobile ? (
-                    <div className="campaign-mobile">
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image3} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox-mobile">
-                        <div className="">
-                          <div className="campaign-heading-hp-mobile">
-                            <a href="#"> تشكيلة رياضية عصرية فاخرة</a>
+      <div className="Root-1">
+        <div className="home-content">
+          <section className="homePage">
+            <div className="Root-1">
+              <div className="home-content">
+                <Row>
+                  <Col>
+                    <div className="campaign-container col-lg-10 col-md-12 ">
+                      {isMobile ? (
+                        <Carousel className="pb-2">
+                          <Carousel.Item className="C-Item">
+                            <a href="/DeliveryInformation">
+                              {lang == "ar"
+                                ? StringManager.freeDelivery.ar
+                                : StringManager.freeDelivery.en}
+                            </a>
+                          </Carousel.Item>
+                          <Carousel.Item className="C-Item">
+                            <a href="ReturnExchange">
+                              {lang == "ar"
+                                ? StringManager.freeReturns.ar
+                                : StringManager.freeReturns.en}
+                            </a>
+                          </Carousel.Item>
+                          <Carousel.Item className="C-Item">
+                            <a href="/DeliveryInformation">
+                              {" "}
+                              {lang == "ar"
+                                ? StringManager.shopOnline.ar
+                                : StringManager.shopOnline.en}
+                            </a>
+                          </Carousel.Item>
+                        </Carousel>
+                      ) : (
+                        <div className="d-flex D-SH pb-4">
+                          <div>
+                            <a href="/DeliveryInformation">
+                              {lang == "ar"
+                                ? StringManager.freeDelivery.ar
+                                : StringManager.freeDelivery.en}
+                            </a>
                           </div>
-                          <div className="campaign-caption-hp-mobile">
+                          <div>
+                            <a href="/ReturnExchange">
+                              {lang == "ar"
+                                ? StringManager.freeReturns.ar
+                                : StringManager.freeReturns.en}
+                            </a>
+                          </div>
+                          <div>
+                            <a href="/DeliveryInformation">
+                              {lang == "ar"
+                                ? StringManager.shopOnline.ar
+                                : StringManager.shopOnline.en}
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <div className="campaign-container col-lg-10 col-md-12 ">
+                      {isMobile ? (
+                        <div className="campaign-mobile">
+                          <div className="campaign-hp">
                             <a href="#">
-                              {" "}
-                              جينزات وجاكيتات فضفاضة, وملابس محبوكة لامعة
+                              <img src={image2} alt="" />
                             </a>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image3} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox">
-                        <div className="text">
-                          <div className="campaign-heading-hp">
-                            <a href="#">تشكيلة رياضية عصرية فاخرة</a>
+                          <div className="textbox-mobile">
+                            <div className="campaign-heading-hp-mobile">
+                              <a href="#">
+                                {" "}
+                                {lang == "ar"
+                                  ? StringManager.campaignHeading1.ar
+                                  : StringManager.campaignHeading1.en}
+                              </a>
+                            </div>
                           </div>
-                          <div className="campaign-caption-hp pt-2">
+                        </div>
+                      ) : (
+                        <div>
+                          <div className="campaign-hp">
                             <a href="#">
-                              {" "}
-                              جينزات وجاكيتات فضفاضة, وملابس محبوكة لامعة
+                              <img src={image1} alt="" />
                             </a>
                           </div>
-                        </div>
+                          <div className="textbox">
+                            <div className="campaign-first-heading-hp pb-5">
+                              <a href="#">
+                                {lang == "ar"
+                                  ? StringManager.campaignHeading1.ar
+                                  : StringManager.campaignHeading1.en}
+                              </a>
+                            </div>
 
-                        <div className="campaign-btn">
-                          <a href="#">تسوقي الآن</a>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="pt-4">
-                <div className="campaign-container col-lg-10 col-md-12 ">
-                  {isMobile ? (
-                    <div className="campaign-mobile">
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image41} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox-mobile">
-                        <div className="">
-                          <div className="campaign-heading-hp-mobile">
-                            <a href="">تصاميم بسيطة فاخرة</a>
-                          </div>
-                          <div className="campaign-caption-hp-mobile">
-                            <a href="">
-                              {" "}
-                              اكتشف التشكيلة الحالية من الإطلالات الراقية.
-                            </a>
+                            <div className="campaign-btn">
+                              <a href="#">
+                                {lang == "ar"
+                                  ? StringManager.campaignButtonThem.ar
+                                  : StringManager.campaignButtonThem.en}
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      )}
                     </div>
-                  ) : (
-                    <div>
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image4} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox">
-                        <div className="text">
-                          <div className="campaign-heading-hp">
-                            <a href="#"> تصاميم بسيطة فاخرة</a>
-                          </div>
-                          <div className="campaign-caption-hp pt-2">
+                  </Col>
+                </Row>
+
+                <Row className="pt-4">
+                  <Col>
+                    <div className="campaign-container col-lg-10 col-md-12 ">
+                      {isMobile ? (
+                        <div className="campaign-mobile">
+                          <div className="campaign-hp">
                             <a href="#">
-                              {" "}
-                              اكتشف التشكيلة الحالية من الإطلالات الراقية.{" "}
+                              <img src={image3} alt="" />
                             </a>
                           </div>
+                          <div className="textbox-mobile">
+                            <div className="">
+                              <div className="campaign-heading-hp-mobile">
+                                <a href="#">
+                                  {" "}
+                                  {lang == "ar"
+                                    ? StringManager.campaignHeading2.ar
+                                    : StringManager.campaignHeading2.en}
+                                </a>
+                              </div>
+                              <div className="campaign-caption-hp-mobile">
+                                <a href="#">
+                                  {lang == "ar"
+                                    ? StringManager.campaignDesc2.ar
+                                    : StringManager.campaignDesc2.en}
+                                </a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      ) : (
+                        <div>
+                          <div className="campaign-hp">
+                            <a href="#">
+                              <img src={image3} alt="" />
+                            </a>
+                          </div>
+                          <div className="textbox">
+                            <div className="text">
+                              <div className="campaign-heading-hp">
+                                <a href="#">
+                                  {lang == "ar"
+                                    ? StringManager.campaignHeading2.ar
+                                    : StringManager.campaignHeading2.en}
+                                </a>
+                              </div>
+                              <div className="campaign-caption-hp pt-2">
+                                <a href="#">
+                                  {lang == "ar"
+                                    ? StringManager.campaignDesc2.ar
+                                    : StringManager.campaignDesc2.en}
+                                </a>
+                              </div>
+                            </div>
 
-                        <div className="campaign-btn">
-                          <a href="#">تسوق الآن</a>
+                            <div className="campaign-btn">
+                              <a href="#">
+                                {lang == "ar"
+                                  ? StringManager.campaignButtonShe.ar
+                                  : StringManager.campaignButtonShe.en}{" "}
+                              </a>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="pt-4">
-                <div className="campaign-container col-lg-10 col-md-12 ">
-                  {isMobile ? (
-                    <div className="campaign-mobile">
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image5} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox-mobile">
-                        <div className="">
-                          <div className="campaign-heading-hp-mobile">
-                            <a href="">خامات ناعمة</a>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="pt-4">
+                    <div className="campaign-container col-lg-10 col-md-12 ">
+                      {isMobile ? (
+                        <div className="campaign-mobile">
+                          <div className="campaign-hp">
+                            <a href="#">
+                              <img src={image41} alt="" />
+                            </a>
                           </div>
-                          <div className="campaign-caption-hp-mobile">
-                            <a href=""> اكتشفوا أنعم البطانيات والوسائد.</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      <div className="campaign-hp">
-                        <a href="#">
-                          <img src={image5} alt="" />
-                        </a>
-                      </div>
-                      <div className="textbox">
-                        <div className="text">
-                          <div className="campaign-heading-hp">
-                            <a href="#"> خامات ناعمة </a>
-                          </div>
-                          <div className="campaign-caption-hp pt-2">
-                            <a href="#"> اكتشفوا أنعم البطانيات والوسائد. </a>
+                          <div className="textbox-mobile">
+                            <div className="">
+                              <div className="campaign-heading-hp-mobile">
+                                <a href="">
+                                  {lang == "ar"
+                                    ? StringManager.campaignHeading3.ar
+                                    : StringManager.campaignHeading3.en}{" "}
+                                </a>
+                              </div>
+                              <div className="campaign-caption-hp-mobile">
+                                <a href="">
+                                  {lang == "ar"
+                                    ? StringManager.campaignDesc3.ar
+                                    : StringManager.campaignDesc3.en}
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                      ) : (
+                        <div>
+                          <div className="campaign-hp">
+                            <a href="#">
+                              <img src={image4} alt="" />
+                            </a>
+                          </div>
+                          <div className="textbox">
+                            <div className="text">
+                              <div className="campaign-heading-hp">
+                                <a href="#">
+                                  {" "}
+                                  {lang == "ar"
+                                    ? StringManager.campaignHeading3.ar
+                                    : StringManager.campaignHeading3.en}{" "}
+                                </a>
+                              </div>
+                              <div className="campaign-caption-hp pt-2">
+                                <a href="#">
+                                  {lang == "ar"
+                                    ? StringManager.campaignDesc3.ar
+                                    : StringManager.campaignDesc3.en}
+                                </a>
+                              </div>
+                            </div>
 
-                        <div className="campaign-btn">
-                          <a href="#">تسوقوا الآن</a>
+                            <div className="campaign-btn">
+                              <a href="#">
+                                {lang == "ar"
+                                  ? StringManager.campaignButtonHe.ar
+                                  : StringManager.campaignButtonHe.en}{" "}
+                              </a>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              </Col>
-            </Row>
-          </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="pt-4">
+                    <div className="campaign-container col-lg-10 col-md-12 ">
+                      {isMobile ? (
+                        <div className="campaign-mobile">
+                          <div className="campaign-hp">
+                            <a href="#">
+                              <img src={image5} alt="" />
+                            </a>
+                          </div>
+                          <div className="textbox-mobile">
+                            <div className="">
+                              <div className="campaign-heading-hp-mobile">
+                                <a href="">
+                                  {lang == "ar"
+                                    ? StringManager.campaignHeading4.ar
+                                    : StringManager.campaignHeading4.en}{" "}
+                                </a>
+                              </div>
+                              <div className="campaign-caption-hp-mobile">
+                                <a href="">
+                                  {" "}
+                                  {lang == "ar"
+                                    ? StringManager.campaignDesc4.ar
+                                    : StringManager.campaignDesc4.en}
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <div>
+                          <div className="campaign-hp">
+                            <a href="#">
+                              <img src={image5} alt="" />
+                            </a>
+                          </div>
+                          <div className="textbox">
+                            <div className="text">
+                              <div className="campaign-heading-hp">
+                                <a href="#">
+                                  {" "}
+                                  {lang == "ar"
+                                    ? StringManager.campaignHeading4.ar
+                                    : StringManager.campaignHeading4.en}{" "}
+                                </a>
+                              </div>
+                              <div className="campaign-caption-hp pt-2">
+                                <a href="#">
+                                  {lang == "ar"
+                                    ? StringManager.campaignDesc4.ar
+                                    : StringManager.campaignDesc4.en}
+                                </a>
+                              </div>
+                            </div>
+
+                            <div className="campaign-btn">
+                              <a href="#">
+                                {" "}
+                                {lang == "ar"
+                                  ? StringManager.campaignButtonThem.ar
+                                  : StringManager.campaignButtonThem.en}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </>
   );
 }

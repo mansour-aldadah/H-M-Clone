@@ -5,10 +5,14 @@ import image1 from "../../assets/deliveryPageImages/image2.jpg";
 import { useState, useEffect } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { Nav, Card, Container } from "react-bootstrap";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 
 function DeliveryInformation() {
   const [isMobile, setIsMobile] = useState(true);
   const [activeTab, setActiveTab] = useState("capital");
+  const [lang, setLang] = useContext(langContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -126,7 +130,11 @@ function DeliveryInformation() {
           <Col>
             <div className="Page-title">
               <div className="heading ">
-                <h2>معلومات التوصيل</h2>
+                <h2>
+                  {lang == "ar"
+                    ? StringManager.deliveryTitle.ar
+                    : StringManager.deliveryTitle.en}{" "}
+                </h2>
               </div>
               <div className="line "></div>
             </div>
@@ -137,12 +145,14 @@ function DeliveryInformation() {
             <Col>
               <div className="pb-3">
                 <p className="fw-bold m-1">
-                  خدمة التوصيل متوفرة لجميع المناطق في مصر.
+                  {lang == "ar"
+                    ? StringManager.deliverySubtitle.ar
+                    : StringManager.deliverySubtitle.en}
                 </p>
                 <p className="subtitles m-1">
-                  بمجرد إكمال عملية الشراء الخاصة بك سنقوم بتجهيز طلبيتك. وسنرسل
-                  لك رسالة تأكيد على عنوان البريد الإلكتروني الذي قمت بإدخاله
-                  يتضمن المنتجات التي قمت بشرائها، وأسعارها.
+                  {lang == "ar"
+                    ? StringManager.deliverySubtitleDesc.ar
+                    : StringManager.deliverySubtitleDesc.en}
                 </p>
               </div>
             </Col>
@@ -151,36 +161,32 @@ function DeliveryInformation() {
           <Row>
             <Col>
               <div className="choices">
-                <p className="fw-bold mb-1">خيارات التوصيل</p>
+                <p className="fw-bold fs-6 mb-1">
+                  {" "}
+                  {lang == "ar"
+                    ? StringManager.deliveryOptions.ar
+                    : StringManager.deliveryOptions.en}
+                </p>
                 <ul className="">
-                  <li className="pb-2">
-                    <p className="m-0" style={{ color: 666666 }}>
-                      <span className="fw-bold">التوصيل في نفس اليوم</span>-
-                      اطلب قبل الساعة 10 صباحاً واستلم طلبيتك في نفس اليوم. (غير
-                      شامل الأثاث). تكلفة التوصيل 150 ج.م.
-                    </p>
-                    <ul className="" style={{ opacity: 0.8 }}>
-                      <li>
-                        يرجى العلم خدمة التوصيل في نفس اليوم لا تتضمن بعض
-                        المناطق.
-                      </li>
-                      <li>جميع المناطق المتاحة سوف تظهر في صفحة الدفع.</li>
-                      <li>خدمة التوصيل في نفس اليوم غير متوفرة يوم الجمعة.</li>
-                    </ul>
-                  </li>
                   <li>
-                    التوصيل العادي - تكلفة التوصيل 99 ج.م.، أو التوصيل المجاني
-                    للطلبيات الأكثر من 1999 ج.م. يرجى العلم بأن توصيل الطلبيات
-                    يستغرق من 1-5 أيام.
+                    {lang == "ar"
+                      ? StringManager.option1.ar
+                      : StringManager.option1.en}
                   </li>
                 </ul>
               </div>
 
               <div className="receive">
-                <p className="fw-bold m-1">خدمة الاستلام من محلاتنا</p>
+                <p className="fw-bold m-1">
+                  {lang == "ar"
+                    ? StringManager.clickCollect.ar
+                    : StringManager.clickCollect.en}
+                </p>
                 <ul>
                   <li>
-                    اطلب أونلاين وأستلم طلبيتك من أي محل تفضله خلال 2-5 أيام.
+                    {lang == "ar"
+                      ? StringManager.clickCollectDesc.ar
+                      : StringManager.clickCollectDesc.en}
                   </li>
                 </ul>
               </div>
@@ -189,11 +195,15 @@ function DeliveryInformation() {
           <Row>
             <Col>
               <div className="safety fw-bold" style={{ fontSize: "12px" }}>
-                <p className="mb-1">إجراءات السلامة</p>
+                <p className="mb-1">
+                  {lang == "ar"
+                    ? StringManager.safetyMeasures.ar
+                    : StringManager.safetyMeasures.en}{" "}
+                </p>
                 <p style={{ opacity: 0.8 }}>
-                  نؤكد لكم التزامنا التام بإجراءات التعقيم والنظافة في جميع
-                  العمليات الخاصة بعملية الطلب والتوصيل من خلال سلسلة من
-                  التدابير الاحترازية التي تتضمن:
+                  {lang == "ar"
+                    ? StringManager.safetyMeasuresDesc.ar
+                    : StringManager.safetyMeasuresDesc.en}
                 </p>
                 <div className="pb-3">
                   {isMobile ? (
@@ -203,8 +213,9 @@ function DeliveryInformation() {
                   )}
                 </div>
                 <p style={{ opacity: 0.8 }}>
-                  سوف نحرص دائماً على إتباع جميع الإجراءات الصحية ووسائل التعقيم
-                  والنظافة لنوفر لكم تجربة تسوق مريحة وآمنة من المنزل.
+                  {lang == "ar"
+                    ? StringManager.safetyMeasuresSub.ar
+                    : StringManager.safetyMeasuresSub.en}
                 </p>
               </div>
             </Col>
@@ -215,82 +226,249 @@ function DeliveryInformation() {
                 {isMobile ? (
                   <Accordion defaultActiveKey={["0"]}>
                     <Accordion.Item eventKey="0">
-                      <Accordion.Header>العاصمة</Accordion.Header>
-                      <Accordion.Body>القاهرة والجيزة</Accordion.Body>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.capital.ar
+                          : StringManager.capital.en}
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        {lang == "ar"
+                          ? StringManager.cairoGiza.ar
+                          : StringManager.cairoGiza.en}{" "}
+                      </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
-                      <Accordion.Header>الإسكندرية</Accordion.Header>
-                      <Accordion.Body>الإسكندرية</Accordion.Body>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.alexandria.ar
+                          : StringManager.alexandria.en}
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        {lang == "ar"
+                          ? StringManager.alexandria.ar
+                          : StringManager.alexandria.en}
+                      </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
-                      <Accordion.Header>مدن القناة</Accordion.Header>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.suezCanal.ar
+                          : StringManager.suezCanal.en}{" "}
+                      </Accordion.Header>
                       <Accordion.Body>
                         <ul style={{ listStyle: "none" }}>
-                          <li>بور سعيد</li>
-                          <li>الإسماعيلية</li>
-                          <li>السويس</li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.portSaid.ar
+                              : StringManager.portSaid.en}{" "}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.ismailia.ar
+                              : StringManager.ismailia.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.suez.ar
+                              : StringManager.suez.en}
+                          </li>
                         </ul>
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="3">
-                      <Accordion.Header>الدلتا</Accordion.Header>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.delta.ar
+                          : StringManager.delta.en}
+                      </Accordion.Header>
                       <Accordion.Body>
                         <ul style={{ listStyle: "none" }}>
-                          <li>القليوبية</li>
-                          <li>المنوفية</li>
-                          <li>الشرقية</li>
-                          <li>الغربية</li>
-                          <li>الدقهلية</li>
-                          <li>البحيرة</li>
-                          <li>دمياط</li>
-                          <li>كفر الشيخ</li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.qalyubia.ar
+                              : StringManager.qalyubia.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.menoufia.ar
+                              : StringManager.menoufia.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.sharqia.ar
+                              : StringManager.sharqia.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.gharbia.ar
+                              : StringManager.gharbia.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.dakahlia.ar
+                              : StringManager.dakahlia.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.beheira.ar
+                              : StringManager.beheira.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.damietta.ar
+                              : StringManager.damietta.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.kafrElSheikh.ar
+                              : StringManager.kafrElSheikh.en}{" "}
+                          </li>
                         </ul>
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="4">
-                      <Accordion.Header>وسط مصر</Accordion.Header>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.centralEgypt.ar
+                          : StringManager.centralEgypt.en}{" "}
+                      </Accordion.Header>
                       <Accordion.Body>
                         <ul style={{ listStyle: "none" }}>
-                          <li>الفيوم</li>
-                          <li>بني سويف</li>
-                          <li>المنيا</li>
-                          <li>أسيوط</li>
-                          <li>سوهاج</li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.fayoum.ar
+                              : StringManager.fayoum.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.beniSuef.ar
+                              : StringManager.beniSuef.en}{" "}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.minya.ar
+                              : StringManager.minya.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.assiut.ar
+                              : StringManager.assiut.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.sohag.ar
+                              : StringManager.sohag.en}
+                          </li>
                         </ul>
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="5">
-                      <Accordion.Header>صعيد مصر</Accordion.Header>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.upperEgypt.ar
+                          : StringManager.upperEgypt.en}{" "}
+                      </Accordion.Header>
                       <Accordion.Body>
                         <ul style={{ listStyle: "none" }}>
-                          <li>قنا</li>
-                          <li> الأقصر</li>
-                          <li>أسوان</li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.qena.ar
+                              : StringManager.qena.en}
+                          </li>
+                          <li>
+                            {" "}
+                            {lang == "ar"
+                              ? StringManager.luxor.ar
+                              : StringManager.luxor.en}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.aswan.ar
+                              : StringManager.aswan.en}
+                          </li>
                         </ul>
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="6">
-                      <Accordion.Header> المناطق السياحية</Accordion.Header>
+                      <Accordion.Header>
+                        {" "}
+                        {lang == "ar"
+                          ? StringManager.touristique.ar
+                          : StringManager.touristique.en}{" "}
+                      </Accordion.Header>
                       <Accordion.Body>
                         <ul style={{ listStyle: "none" }}>
-                          <li>البحر الأحمر</li>
-                          <li> جنوب سيناء</li>
-                          <li>الساحل الشمالي</li>
-                          <li>مرسى مطروح</li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.redSea.ar
+                              : StringManager.redSea.en}{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            {lang == "ar"
+                              ? StringManager.southSinai.ar
+                              : StringManager.southSinai.en}{" "}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.northCoast.ar
+                              : StringManager.northCoast.en}{" "}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.marsaMatrouh.ar
+                              : StringManager.marsaMatrouh.en}{" "}
+                          </li>
                         </ul>
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="7">
-                      <Accordion.Header> المناطق البعيدة</Accordion.Header>
+                      <Accordion.Header>
+                        {lang == "ar"
+                          ? StringManager.remoteAreas.ar
+                          : StringManager.remoteAreas.en}{" "}
+                      </Accordion.Header>
                       <Accordion.Body>
                         <ul style={{ listStyle: "none", lineHeight: 2 }}>
-                          <li>الوادي الجديد </li>
-                          <li> شمال سيناء</li>
-                          <li>أبو سمبل </li>
-                          <li>مرسى علم </li>
-                          <li> السلوم </li>
-                          <li> حلايب</li>
-                          <li> شلاتين </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.newValley.ar
+                              : StringManager.newValley.en}{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            {lang == "ar"
+                              ? StringManager.northSinai.ar
+                              : StringManager.northSinai.en}{" "}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.abuSimbel.ar
+                              : StringManager.abuSimbel.en}{" "}
+                          </li>
+                          <li>
+                            {lang == "ar"
+                              ? StringManager.marsaAlam.ar
+                              : StringManager.marsaAlam.en}{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            {lang == "ar"
+                              ? StringManager.salloum.ar
+                              : StringManager.salloum.en}{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            {lang == "ar"
+                              ? StringManager.halayeb.ar
+                              : StringManager.halayeb.en}
+                          </li>
+                          <li>
+                            {" "}
+                            {lang == "ar"
+                              ? StringManager.shalateen.ar
+                              : StringManager.shalateen.en}{" "}
+                          </li>
                         </ul>
                       </Accordion.Body>
                     </Accordion.Item>
@@ -304,31 +482,59 @@ function DeliveryInformation() {
                       onSelect={(k) => setActiveTab(k)}
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="capital">العاصمة</Nav.Link>
+                        <Nav.Link eventKey="capital">
+                          {lang == "ar"
+                            ? StringManager.capital.ar
+                            : StringManager.capital.en}
+                        </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="alexandria">الإسكندرية</Nav.Link>
+                        <Nav.Link eventKey="alexandria">
+                          {lang == "ar"
+                            ? StringManager.alexandria.ar
+                            : StringManager.alexandria.en}
+                        </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="canalCities">مدن القناة</Nav.Link>
+                        <Nav.Link eventKey="canalCities">
+                          {lang == "ar"
+                            ? StringManager.suezCanal.ar
+                            : StringManager.suezCanal.en}{" "}
+                        </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="delta">الدلتا</Nav.Link>
+                        <Nav.Link eventKey="delta">
+                          {lang == "ar"
+                            ? StringManager.delta.ar
+                            : StringManager.delta.en}
+                        </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="middleEgypt">وسط مصر</Nav.Link>
+                        <Nav.Link eventKey="middleEgypt">
+                          {lang == "ar"
+                            ? StringManager.centralEgypt.ar
+                            : StringManager.centralEgypt.en}{" "}
+                        </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="upperEgypt">صعيد مصر</Nav.Link>
+                        <Nav.Link eventKey="upperEgypt">
+                          {lang == "ar"
+                            ? StringManager.upperEgypt.ar
+                            : StringManager.upperEgypt.en}{" "}
+                        </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="touristAreas">
-                          المناطق السياحية
+                          {lang == "ar"
+                            ? StringManager.touristique.ar
+                            : StringManager.touristique.en}
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="remoteAreas">
-                          المناطق البعيدة
+                          {lang == "ar"
+                            ? StringManager.remoteAreas.ar
+                            : StringManager.remoteAreas.en}
                         </Nav.Link>
                       </Nav.Item>
                     </Nav>
@@ -345,57 +551,81 @@ function DeliveryInformation() {
             <Col>
               <div className="payment-choices">
                 <h2 className="fw-bold pb-3" style={{ fontSize: "15px" }}>
-                  خيارات الدفع
+                  {lang == "ar"
+                    ? StringManager.paymentOptions.ar
+                    : StringManager.paymentOptions.en}
                 </h2>
                 <div className="pb-3" style={{ fontSize: "12px" }}>
                   <p className="fw-bold">
-                    البطاقات الائتمانية/ بطاقات الخصم المباشر
+                    {lang == "ar"
+                      ? StringManager.creditDebit.ar
+                      : StringManager.creditDebit.en}
                   </p>
                   <p>
-                    نحن نقبل الدفع عن طريق البطاقات الائتمانية /أو بطاقات الخصم
-                    المباشر المحلية والدولية مثل فيزا وماستر كارد.
+                    {lang == "ar"
+                      ? StringManager.creditDebitDesc.ar
+                      : StringManager.creditDebitDesc.en}
                   </p>
                 </div>
                 <div
                   className="pb-3"
                   style={{ lineHeight: 0.8, fontSize: "12px" }}
                 >
-                  <p className="fw-bold">خدمة الدفع عند الاستلام</p>
-                  <p>خدمة الدفع عند الاستلام غير متوفرة حالياً.</p>
+                  <p className="fw-bold">
+                    {lang == "ar"
+                      ? StringManager.cashOnDelivery.ar
+                      : StringManager.cashOnDelivery.en}{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    {lang == "ar"
+                      ? StringManager.cashOnDeliveryDesc.ar
+                      : StringManager.cashOnDeliveryDesc.en}
+                  </p>
                 </div>
                 <div style={{ fontSize: "12px" }}>
-                  <p className="fw-bold">خدمة الاستلام من محلاتنا</p>
-
-                  <p>
-                    يمكنك الدفع عن طريق الموقع، لنقوم بتوصيل طلبيتك إلى المحل
-                    الذي تختاره للاستلام. عندما تقوم بعمل طلبية سوف تستلم بريد
-                    إلكتروني للتأكيد أو رسالة نصية تتضمن رقم الطلبية. سنقوم
-                    بدورنا بإرسال بريد إلكتروني أو رسالة نصية لنخبركم بأن
-                    الطلبية جاهزة للتسليم.
+                  <p className="fw-bold">
+                    {" "}
+                    {lang == "ar"
+                      ? StringManager.clickCollectService.ar
+                      : StringManager.clickCollectService.en}{" "}
                   </p>
 
                   <p>
-                    إذا لم تتمكن من استلام الطلبية لأي سبب، يرجى الإتصال على
-                    الرقم 02-24803822
+                    {lang == "ar"
+                      ? StringManager.clickCollectServiceDesc1.ar
+                      : StringManager.clickCollectServiceDesc1.en}
                   </p>
 
                   <p>
-                    يرجى العلم بأننا لن نتمكن من قبول الطلبيات التي تتضمن منتجات
-                    غير متوفرة، أو الطلبيات التي تحتوي على منتجات بخياري التوصيل
-                    للمنزل والاستلام من محلاتنا معاً. في هذه الحالة يرجى القيام
-                    بطلبيتين مختلفتين، طلبية بخدمة الاستلام من محلاتنا والأخرى
-                    بخدمة التوصيل للمنزل.
+                    {lang == "ar"
+                      ? StringManager.clickCollectServiceDesc2.ar
+                      : StringManager.clickCollectServiceDesc2.en}
                   </p>
-
-                  <p>سنقوم بالاحتفاظ بالطلبية داخل المحل لمدة 14 أيام عمل.</p>
 
                   <p>
-                    جميع الطلبيات التي لم تستلم سوف يتم إلغاءها، وأي عملية دفع
-                    سابقة سنقوم بإعادة المبلغ للبطاقة الإئتمانية التي تم
-                    استخدامها في عملية الدفع.
+                    {lang == "ar"
+                      ? StringManager.clickCollectServiceDesc3.ar
+                      : StringManager.clickCollectServiceDesc3.en}
                   </p>
 
-                  <p>للمزيد من المعلومات يرجى زيارة صفحة الأسئلة المتكررة.</p>
+                  <p>
+                    {lang == "ar"
+                      ? StringManager.clickCollectServiceDesc4.ar
+                      : StringManager.clickCollectServiceDesc4.en}
+                  </p>
+
+                  <p>
+                    {lang == "ar"
+                      ? StringManager.clickCollectServiceDesc5.ar
+                      : StringManager.clickCollectServiceDesc5.en}
+                  </p>
+
+                  <p>
+                    {lang == "ar"
+                      ? StringManager.clickCollectServiceDesc6.ar
+                      : StringManager.clickCollectServiceDesc6.en}
+                  </p>
                 </div>
               </div>
             </Col>

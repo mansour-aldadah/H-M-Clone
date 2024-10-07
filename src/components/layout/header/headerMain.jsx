@@ -4,6 +4,7 @@ import "./headerMain.css";
 import React, { useContext, useEffect } from "react";
 import langContext from "../../../services/context/langContext";
 import StringManager from "../../../resources/stringManager";
+import { Link } from "react-router-dom";
 
 const HeaderMain = () => {
   const [lang, setLang] = useContext(langContext);
@@ -16,26 +17,35 @@ const HeaderMain = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-center w-100">
             {/* <Nav.Link href="#en">{lang}</Nav.Link> */}
-            <Nav.Link
+
+            <button
               onClick={() => {
+                console.log("Switching language from", lang); // Check language before switching
                 setLang(lang === "ar" ? "en" : "ar");
+                console.log("Language switched to:", lang);
               }}
             >
+              {" "}
               {lang === "ar" ? "English" : "العربية"}
-            </Nav.Link>
-            <Nav.Link href="/location">
-              {lang == "ar" ? StringManager.find.ar : StringManager.find.en}
-            </Nav.Link>
-            <Nav.Link href="/login">
+            </button>
+
+            <Link to="/location">
+              {" "}
+              {lang == "ar"
+                ? StringManager.find.ar
+                : StringManager.find.en}{" "}
+            </Link>
+
+            <Nav.Link href="#login">
               {" "}
               {lang == "ar"
                 ? StringManager.login.ar
                 : StringManager.login.en}{" "}
             </Nav.Link>
-            <Nav.Link href="/register">
+            <Nav.Link href="#register">
               {lang == "ar"
                 ? StringManager.register.ar
-                : StringManager.register.en}{" "}
+                : StringManager.register.en}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

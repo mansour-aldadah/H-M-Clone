@@ -1,242 +1,414 @@
 import React from "react";
 import "./Questions.css";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 
 export default function Questions() {
+  const [lang, setLang] = useContext(langContext);
   return (
-    <section className="questions py-5 px-4">
-      <h3 className="p-0 m-0">الأسئلة المتكررة</h3>
+    <section className="questions py-5 px-4" dir="rtl">
+      <h3 className="p-0 m-0">
+        {" "}
+        {lang == "ar" ? StringManager.questions.ar : StringManager.questions.en}
+      </h3>
       <hr className="mt-2" />
 
       <div className="question">
-        <h5 className="mt-3">ما هي خيارات التوصيل التي لديكم؟</h5>
+        <h5 className="mt-3">
+          {" "}
+          {lang == "ar"
+            ? StringManager.question1.ar
+            : StringManager.question1.en}{" "}
+        </h5>
         <p className="text-muted m-0 p-0">
-          نقدم خدمة التوصيل للمنزل بالإضافة لخدمة اختر واستلم من المحل، كما أن
-          أوقات وتكلفة التوصيل تختلف حسب المكان. للمزيد من المعلومات يرجى زيارة{" "}
-          <a href="#" className="text-decoration-none">
-            صفحة معلومات التوصيل.
+          {lang == "ar"
+            ? StringManager.question1Answer.ar
+            : StringManager.question1Answer.en}
+          <a href="/DeliveryInformation" className="text-decoration-none">
+            {lang == "ar"
+              ? StringManager.question1Link.ar
+              : StringManager.question1Link.en}
           </a>
         </p>
       </div>
       <div className="question">
         <h5 className="mt-3">
-          متى يبدأ فريق خدمة الزبائن بالعمل لدى اتش آند ام وكيف يتم الاتصال بهم؟
+          {lang == "ar"
+            ? StringManager.question2.ar
+            : StringManager.question2.en}
         </h5>
         <p className="text-muted m-0 p-0">
-          بإمكانك التواصل مع فريق خدمة الزبائن على الرقم التالي:{" "}
+          {lang == "ar"
+            ? StringManager.question2.ar
+            : StringManager.question2.en}
           <a href="#" className="text-decoration-none">
             02-24803822
           </a>
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-3">خدمة عملاء اتش آند ام:</h5>
+        <h5 className="mt-3">
+          {" "}
+          {lang == "ar"
+            ? StringManager.question3.ar
+            : StringManager.question3.en}
+        </h5>
         <p className="text-muted m-0 p-0">
-          أوقات العمل أيام السبت إلى الخميس من الساعة 8 صباحاً إلى 9 مساءً و
-          أيام الجمعة من الساعة 12 مساءً إلى 9 مساءً.
+          {lang == "ar"
+            ? StringManager.question3Answer.ar
+            : StringManager.question3Answer.en}
         </p>
         <p className="text-muted mx-0 my-3 p-0">
-          وبإمكانك الاتصال بنا باستخدام الاستمارة السريعة وسيقوم فريق العمل
-          لدينا بالاتصال بك بأسرع وقت.
+          {lang == "ar"
+            ? StringManager.question3Answer2.ar
+            : StringManager.question3Answer2.en}
         </p>
       </div>
 
       <div className="question">
-        <h5 className="mt-3"></h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question4.ar
+            : StringManager.question4.en}
+        </h5>
         <p className="text-muted m-0 my-2 p-0">
-          يمكنكم عرض سجل طلبيتكم في أي وقت من خلال الموقع، وبكل سهولة من خلال
-          اتباع الخطوات التالية:
+          {lang == "ar"
+            ? StringManager.question4Answer.ar
+            : StringManager.question4Answer.en}
         </p>
         <ol className="py-0 px-3">
           <li>
-            سجل الدخول عبر الموقع واضغط على قائمة "حسابي" الموجودة في أعلى
-            الصفحة.
+            {lang == "ar"
+              ? StringManager.question4Step1.ar
+              : StringManager.question4Step1.en}
           </li>
           <li>
-            اضغط على الرابط "عرض الطلبيات" على يسار الصفحة. وبهذا سوف تتمكن من
-            عرض سجل الطلبية.
+            {lang == "ar"
+              ? StringManager.question4Step2.ar
+              : StringManager.question4Step2.en}
           </li>
         </ol>
       </div>
       <div className="question">
-        <h5 className="mt-3">هل يمكنني تتبع مسار طلبيتي عبر الموقع؟</h5>
+        <h5 className="mt-3">
+          {" "}
+          {lang == "ar"
+            ? StringManager.question5.ar
+            : StringManager.question5.en}{" "}
+        </h5>
         <p className="text-muted m-0 my-2 p-0">
-          بالطبع، سوف تتلقى رابط تتبع خاص عبر البريد الإلكتروني بمجرد تجهيز
-          طلبيتك. سيتيح لك هذا الرابط تتبع طلبيتك في أيّ وقت ومعرفة موعد
-          التوصيل.
+          {lang == "ar"
+            ? StringManager.question5Answer.ar
+            : StringManager.question5Answer.en}
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-3">كم يستغرق زمن التوصيل عند تسجيل الطلبية؟</h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question6.ar
+            : StringManager.question6.en}
+        </h5>
         <p className="text-muted m-0 my-2 p-0">
-          البريد الالكتروني المؤكد لطلبك سوف يخبرك بالوقت المتوقع للتوصيل، وشركة
-          التوصيل سوف تحاول الاتصال بك في حال عدم توفر معلومات كافية لإيصال
-          طلبيتك.
+          {lang == "ar"
+            ? StringManager.question6Answer.ar
+            : StringManager.question6Answer.en}
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-4">ماهي طريقة استرجاع المنتجات؟</h5>
+        <h5 className="mt-4">
+          {lang == "ar"
+            ? StringManager.question7.ar
+            : StringManager.question7.en}{" "}
+        </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          اتش آند ام ملتزمة بتقديم أعلى مستوى في كلا من النوعية والخدمة ويسرنا
-          استرداد المبلغ لأي قطعة لا تناسبك طالما تمت إعادتها دون استعمال
-          وبتغليفها الأصلي خلال 14 يوما من تاريخ استلام الطلب مع نسخة من
-          الفاتورة. كما أن القطع المطلوبة يمكن إعادتها لأي محل من محلات اتش آند
-          ام.
+          {lang == "ar"
+            ? StringManager.question7Answer.ar
+            : StringManager.question7Answer.en}
         </p>
         <p className="text-muted m-0 my-2 p-0">
-          للمزيد من التفاصيل من فضلك قم بزيارة{" "}
-          <a href="#" className="text-decoration-none">
-            صفحة الاسترجاع والتبديل{" "}
+          {lang == "ar"
+            ? StringManager.question7sub.ar
+            : StringManager.question7sub.en}
+          <a href="/ReturnExchange" className="text-decoration-none">
+            {lang == "ar"
+              ? StringManager.question7Link.ar
+              : StringManager.question7Link.en}
           </a>
           .
         </p>
       </div>
       <div className="question">
         <h5 className="mt-3">
-          لقد استلمت رمز قسيمة خصم ولكن الرمز لا يعمل ما السبب؟
+          {lang == "ar"
+            ? StringManager.question8.ar
+            : StringManager.question8.en}
         </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          يرجى العلم أنه عند استخدام رمز الخصم أول مرة لا يمكن استخدامه مرة أخرى
-          لذلك لا تستخدمه حتى تكون متأكد بأنك جاهز للطلب ودفع ثمن الطلبية.
+          {lang == "ar"
+            ? StringManager.question8Answer1.ar
+            : StringManager.question8Answer1.en}
         </p>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          معظم أسباب عدم عمل رموز الخصم هي: انتهاء صلاحية الرمز، أو أن الرمز
-          استخدم لمنتجات لا ينطبق عليها استخدام رمز الخصم، أو لم يتم الوصول للحد
-          الأدنى للطلبية
+          {lang == "ar"
+            ? StringManager.question8Answer2.ar
+            : StringManager.question8Answer2.en}
         </p>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          إذا كنت تواجه مشاكل أخرى نرجو منك الاتصال بنا باستخدام طلب الاستمارة
-          السريعة وسيسرنا شرح كيف تستطيع استرجاع قيمة خصوماتك عن طريق الموقع.
+          {lang == "ar"
+            ? StringManager.question8Answer3.ar
+            : StringManager.question8Answer3.en}
         </p>
       </div>
       <div className="question">
         <h5 className="mt-3">
-          كيف أستطيع إزالة تفاصيل معلوماتي من قائمة بريدكم؟
+          {lang == "ar"
+            ? StringManager.question9.ar
+            : StringManager.question9.en}
         </h5>
         <p className="text-muted m-0 my-2 p-0">
-          نأسف لسماعنا أنك تفكر بعدم الاشتراك. يمكنك الدخول الى حسابك على موقعنا
-          واتباع الخطوات التالية
+          {lang == "ar"
+            ? StringManager.question9Answer.ar
+            : StringManager.question9Answer.en}
         </p>
         <ol className="py-0 px-3">
-          <li>اضغط على رابط "حسابي" في أعلى صفحة الموقع</li>
-          <li>اضغط على "الطريقة المفضلة للاتصال"</li>
-          <li>قم بإزالة علامة تفعيل بريدك واضغط "حفظ"</li>
-          <li>ستظهر لك رسالة تقول: تم إلغاء الاشتراك</li>
           <li>
-            إن كنت تريد الاشتراك لمعرفة أخبارنا مرة أخرى في أي وقت، ضع علامة
-            التفعيل على المربع واضغط على "حفظ"
+            {lang == "ar"
+              ? StringManager.question9Step1.ar
+              : StringManager.question9Step1.en}
+          </li>
+          <li>
+            {" "}
+            {lang == "ar"
+              ? StringManager.question9Step2.ar
+              : StringManager.question9Step2.en}
+          </li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question9Step3.ar
+              : StringManager.question9Step3.en}
+          </li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question9Step4.ar
+              : StringManager.question9Step4.en}{" "}
+          </li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question9Step5.ar
+              : StringManager.question9Step5.en}
           </li>
         </ol>
         <p className="text-muted m-0 my-2 p-0">
-          يمكنك أيضا إلغاء الاشتراك بالضغط على رابط إلغاء الاشتراك في نهاية أي
-          بريد إلكتروني. عند الضغط سنقوم بتوجيهك إلى صفحة عدم الاشتراك في الموقع
-          وبمجرد إدخال سبب عدم الاشتراك والضغط على "إلغاء الاشتراك"، سيتم
-          الإلغاء وستتمكن من القيام برحلة تسوق جديدة.
+          {lang == "ar"
+            ? StringManager.question9Sub.ar
+            : StringManager.question9Sub.en}
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-3">لماذا تم إلغاء طلبيتي؟</h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question10.ar
+            : StringManager.question10.en}{" "}
+        </h5>
         <p className="text-muted m-0 my-2 p-0">
-          قد يكون تم إلغاء طلبيتك لعدة أسباب وأكثر الأسباب هي:
+          {lang == "ar"
+            ? StringManager.question10Answer.ar
+            : StringManager.question10Answer.en}
         </p>
         <ul className="py-0 px-3">
           <li>
-            ارتفاع الطلب على السلع – وفي هذه الحالة سيصلك بريد الكتروني يؤكد
-            الإلغاء وماذا يجب أن تفعل بعد ذلك.
+            {lang == "ar"
+              ? StringManager.question10Reason1.ar
+              : StringManager.question10Reason1.en}
           </li>
-          <li>إذا طلبت الإلغاء. سيصلك بريد الكتروني يؤكد إلغاء الطلبية.</li>
-          <li>في حالة فشل توصيل الطلب لعنوان التوصيل الذي حددته.</li>
-          <li>إذا حدث فشل في عملية الدفع.</li>
-          <li>إذا لم يتم استلام الطلبية من المحل المحدد خلال 14 يوم.</li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question10Reason2.ar
+              : StringManager.question10Reason2.en}
+          </li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question10Reason3.ar
+              : StringManager.question10Reason3.en}{" "}
+          </li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question10Reason4.ar
+              : StringManager.question10Reason4.en}
+          </li>
+          <li>
+            {lang == "ar"
+              ? StringManager.question10Reason5.ar
+              : StringManager.question10Reason5.en}
+          </li>
         </ul>
       </div>
 
       <div className="question">
-        <h5 className="mt-3">ما المقصود بخدمة "الاستلام من محلاتنا"؟</h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question11.ar
+            : StringManager.question11.en}
+        </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          تستطيع طلب أي منتج من الموقع من خلال خدمة "الاستلام من محلاتنا"، حيث
-          يتم توصيله للمحل الذي تختاره من بين هذه المحلات:
+          {lang == "ar"
+            ? StringManager.question11Answer.ar
+            : StringManager.question11Answer.en}
         </p>
-        <p className="px-0 py-2 m-0">• سيتي ستارز، القاهرة</p>
-        <p className="px-0 py-2 m-0">• سيتي سنتر، الإسكندرية</p>
-        <p className="px-0 py-2 m-0">• داندي مول، القاهرة</p>
-        <p className="px-0 py-2 m-0">• القطامية داون تاون، القاهرة</p>
-        <p className="px-0 py-2 m-0">• المعادي سيتي سنتر، القاهرة</p>
-        <p className="px-0 py-2 m-0">• شارع لبنان بالمهندسين، القاهرة</p>
-        <p className="px-0 py-2 m-0">• كايرو فستيفال سيتي</p>
         <p className="px-0 py-2 m-0">
-          • محل الأطفال، شارع لبنان، المهندسين، القاهرة
+          {lang == "ar"
+            ? StringManager.question11Branche1.ar
+            : StringManager.question11Branche1.en}{" "}
         </p>
-        <p className="px-0 py-2 m-0">• سموحة، لوتس ستارز، الإسكندرية</p>
-        <p className="px-0 py-2 m-0">• سموحة، لوتس ستارز، الإسكندرية</p>
-        <p className="px-0 py-2 m-0">• شارع نهرو، مصر الجديدة، القاهرة</p>
-        <p className="px-0 py-2 m-0">• مول مصر</p>
-        <p className="px-0 py-2 m-0">• الدقي، شارع نادي الصيد</p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche2.ar
+            : StringManager.question11Branche2.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche3.ar
+            : StringManager.question11Branche3.en}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche4.ar
+            : StringManager.question11Branche4.en}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche5.ar
+            : StringManager.question11Branche5.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche6.ar
+            : StringManager.question11Branche6.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche7.ar
+            : StringManager.question11Branche7.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche8.ar
+            : StringManager.question11Branche8.en}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche9.ar
+            : StringManager.question11Branche9.en}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche10.ar
+            : StringManager.question11Branche10.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche11.ar
+            : StringManager.question11Branche11.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche12.ar
+            : StringManager.question11Branche12.en}{" "}
+        </p>
+        <p className="px-0 py-2 m-0">
+          {lang == "ar"
+            ? StringManager.question11Branche13.ar
+            : StringManager.question11Branche13.en}{" "}
+        </p>
       </div>
 
       <div className="question">
         <h5 className="mt-3">
-          لقد سجلت طلبية عن طريق الموقع ولكن لم يصلني بريد الكتروني للتأكيد.
-          لماذا؟
+          {lang == "ar"
+            ? StringManager.question12.ar
+            : StringManager.question12.en}
         </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          نأسف لعدم استلامك بريد الكتروني للتأكيد. إذا كان عنوان بريدنا ليس في
-          قائمة عناوينك الآمنة فربما قد صنفه بريدك على أنه غير مرغوب فيه، وهذا
-          يعني انه لن يظهر في صندوق بريدك، فمن الأفضل التأكد أن عنوان بريدك قد
-          تم إدخاله بشكل صحيح.
+          {lang == "ar"
+            ? StringManager.question12Answer.ar
+            : StringManager.question12Answer.en}
         </p>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          الرسائل الالكترونية لتأكيد الطلبية ترسل عادةً بعد دقائق من تسجيل
-          الطلبية. ولكن عندما يكون الموقع مشغول نظراً لارتفاع الطلب على السلع،
-          يتوجب عليك الانتظار قليلاً قبل استلام البريد الالكتروني.
-        </p>
-      </div>
-      <div className="question">
-        <h5 className="mt-3">كيف يمكنني تغيير عنوان التوصيل؟</h5>
-        <p className="text-muted m-0 mt-2 mb-3 p-0">
-          بإمكانك تحديث سجل عناوينك بالضغط على رابط "حسابي" في أعلى الصفحة
-          والدخول باستخدام اسم المستخدم وكلمة السر واختيار سجل العناوين حيث
-          بإمكانك إضافة، أو إزالة، أو تعديل العناوين الخاصة بك.
-        </p>
-        <p className="text-muted m-0 mt-2 mb-3 p-0">
-          إذا قمت بأي تغيرات على العنوان بعد تسجيل الطلبية فإن تفاصيل ومعلومات
-          التوصيل لن تتغير، لأنه عندما يتم تسجيل الطلبية لا نستطيع تغيير عنوان
-          التوصيل مهما كان.
+          {lang == "ar"
+            ? StringManager.question12Answer2.ar
+            : StringManager.question12Answer2.en}
         </p>
       </div>
       <div className="question">
         <h5 className="mt-3">
-          بعد اتمام الطلبية، متى يتم خصم المبلغ من حسابي؟
+          {lang == "ar"
+            ? StringManager.question13.ar
+            : StringManager.question13.en}
         </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          سيتم تحصيل جميع المدفوعات بمجرد إتمام الطلبية. يسري على البطاقات
-          الائتمانية وبطاقات السحب الآلي.
+          {lang == "ar"
+            ? StringManager.question13Answer.ar
+            : StringManager.question13Answer.en}
+        </p>
+        <p className="text-muted m-0 mt-2 mb-3 p-0">
+          {lang == "ar"
+            ? StringManager.question13Answer2.ar
+            : StringManager.question13Answer2.en}
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-3">كيف أعرف أن الطلبية عبر الموقع تمت بنجاح؟</h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question14.ar
+            : StringManager.question14.en}
+        </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          عند تسجيل طلبية على موقعنا سوف نرسل بريد الكتروني يؤكد طلبيتك وكل
-          معلومات التوصيل وعنوان الفاتورة وكل المنتجات التي طلبتها.
-        </p>
-        <p className="text-muted m-0 mt-2 mb-3 p-0">
-          نرجو منك التأكد أن جميع المعلومات صحيحة في بريد التأكيد لأن المعلومات
-          غير الصحيحة ممكن أن تتسبب في تأخير في طلبيتك.
+          {lang == "ar"
+            ? StringManager.question14Answer.ar
+            : StringManager.question14Answer.en}
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-3">لقد نسيت كلمة السر. ماذا أفعل؟</h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question15.ar
+            : StringManager.question15.en}
+        </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          إذا كان لديك حساب على موقعنا ونسيت كلمة السر نرجو منك أن تضغط هنا
-          <a href="#" className="text-decoration-none">
-            "تسجيل الدخول أو التسجيل"{" "}
-          </a>{" "}
-          ثم انقر على رابط "نسيت كلمة السر" سنرسل لك بريد إلكتروني مع تعليمات
-          لإعادة تعيين كلمة السر.
+          {lang == "ar"
+            ? StringManager.question15Answer.ar
+            : StringManager.question15Answer.en}
         </p>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          إذا لم تستلم رسالة حول إعادة تعيين كلمة السر خلال ساعة، ادخل على مجلد
-          الرسائل غير المرغوب فيها. وإذا لم تجد الرسالة في ذلك المجلد نرجو منك
-          الاتصال بفريق خدمة الزبائن على الرقم
+          {lang == "ar"
+            ? StringManager.question15Answer2.ar
+            : StringManager.question15Answer2.en}
+        </p>
+      </div>
+      <div className="question">
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question16.ar
+            : StringManager.question16.en}
+        </h5>
+        <p className="text-muted m-0 mt-2 mb-3 p-0">
+          {lang == "ar"
+            ? StringManager.question16Answer1.ar
+            : StringManager.question16Answer1.en}
+          <a href="login" className="text-decoration-none">
+            {lang == "ar"
+              ? StringManager.question16Link.ar
+              : StringManager.question16Link.en}
+          </a>
+          {lang == "ar"
+            ? StringManager.question16Answer2.ar
+            : StringManager.question16Answer2.en}
+        </p>
+        <p className="text-muted m-0 mt-2 mb-3 p-0">
+          {lang == "ar"
+            ? StringManager.question16Answer3.ar
+            : StringManager.question16Answer3.en}
         </p>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
           <a href="#" className="text-decoration-none">
@@ -245,10 +417,22 @@ export default function Questions() {
         </p>
       </div>
       <div className="question">
-        <h5 className="mt-3">هل أستطيع تغيير معلومات الدفع؟</h5>
+        <h5 className="mt-3">
+          {lang == "ar"
+            ? StringManager.question17.ar
+            : StringManager.question17.en}
+        </h5>
         <p className="text-muted m-0 mt-2 mb-3 p-0">
-          عندما يتم قبول طلبيتك لا تستطيع تغيير معلومات الدفع كما أننا بشكل
-          افتراضي لا نحفظ أي معلومات دفع في أنظمة أجهزتنا.
+          {" "}
+          {lang == "ar"
+            ? StringManager.question17Answer.ar
+            : StringManager.question17Answer.en}
+        </p>
+        <p className="text-muted m-0 mt-2 mb-3 p-0">
+          {" "}
+          {lang == "ar"
+            ? StringManager.question17Answer2.ar
+            : StringManager.question17Answer2.en}
         </p>
       </div>
       <div className="question">

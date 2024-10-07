@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/Home/homePage";
+import HomePage from "./pages/home/homePage";
 import MainLayout from "./components/shared/mainLayout/mainLayout";
 import NotFound from "./pages/NotFound/NotFound";
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -20,7 +20,7 @@ import WebsiteMap from "./pages/WebsiteMap/WebsiteMap";
 import WeeklyGiftCardsPage from "./pages/WeeklyGiftCardsPage/WeeklyGiftCardsPage";
 import ReturnExchange from "./pages/ReturnExchange/ReturnExchangePage";
 import Product_detail, {
-  ProductLoader
+  ProductLoader,
 } from "./pages/product details/productdet";
 
 export const routes = createBrowserRouter([
@@ -33,12 +33,12 @@ export const routes = createBrowserRouter([
       {
         path: "/:category",
         element: <AllProducts />,
-        loader: CategoriesLoader
+        loader: CategoriesLoader,
       },
       {
         path: "/products/:id",
         element: <Product_detail />,
-        loader: ProductLoader
+        loader: ProductLoader,
       },
       { path: "ContactUs", element: <ContactUs /> },
       { path: "DeliveryInformation", element: <DeliveryInformation /> },
@@ -55,7 +55,10 @@ export const routes = createBrowserRouter([
       { path: "WebsiteMap", element: <WebsiteMap /> },
       { path: "WeeklyGiftCardsPage", element: <WeeklyGiftCardsPage /> },
       { path: "ReturnExchange", element: <ReturnExchange /> },
-      { path: "*", element: <NotFound /> }
-    ]
-  }
+
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+
+  { path: "*", element: <NotFound /> },
 ]);

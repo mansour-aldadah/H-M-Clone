@@ -8,10 +8,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io";
 import { IoLogoFacebook } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import langContext from "../../../services/context/langContext";
+import StringManager from "../../../resources/stringManager";
 
-export default function Footer() {
+function Footer() {
   const navigate = useNavigate();
-
+  const [lang, setLang] = useContext(langContext);
   const [activeKey, setActiveKey] = useState(null);
 
   // Toggle the active state
@@ -27,113 +30,147 @@ export default function Footer() {
           <span className="px-2 non-active">ENGLISH</span>
         </div>
         <Row className="m-0">
-          <Col md="4" lg="6" className="d-none d-md-block">
-            <Row className="pe-sm-4 pe-md-5">
-              <Col xs="12" lg="7" className="about text-lg-center mb-3 mb-lg-0">
-                <div className="d-inline-block links text-lg-end">
-                  <h6>حول اتش آند ام</h6>
+          <Col md="4" lg="6" className="d-none d-md-block ">
+            <Row className="pe-sm-4 pe-md-5 m-auto d-flex">
+              <Col xs="12" lg="7" className="about  mb-3 mb-lg-0">
+                <div className="d-inline-block links">
+                  <h6>
+                    {lang == "ar"
+                      ? StringManager.footerTitle.ar
+                      : StringManager.footerTitle.en}
+                  </h6>
                   <a
                     onClick={() => navigate("/AboutUs")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    معلومات عنا
+                    {lang == "ar"
+                      ? StringManager.aboutUs.ar
+                      : StringManager.aboutUs.en}
                   </a>
                   <a
                     onClick={() => navigate("/DeliveryInformation")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    معلومات التوصيل
+                    {lang == "ar"
+                      ? StringManager.delivery.ar
+                      : StringManager.delivery.en}
                   </a>
                   <a
                     onClick={() => navigate("/PurchaseTerms")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    شروط وأحكام الشراء{" "}
+                    {lang == "ar"
+                      ? StringManager.termsSale.ar
+                      : StringManager.termsSale.en}
                   </a>
                   <a
                     onClick={() => navigate("/Terms")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    شروط وأحكام الموقع
+                    {lang == "ar"
+                      ? StringManager.webTerms.ar
+                      : StringManager.webTerms.en}
                   </a>
                   <a
                     onClick={() => navigate("/PrivacyPolicy")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    سياسة الخصوصية
+                    {lang == "ar"
+                      ? StringManager.privacyPolicy.ar
+                      : StringManager.privacyPolicy.en}
                   </a>
                   <a
                     onClick={() => navigate("/ReturnExchange")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    الإرجاع والاستبدال
+                    {lang == "ar"
+                      ? StringManager.returns.ar
+                      : StringManager.returns.en}
                   </a>
                   <a
                     onClick={() => navigate("/Sustainability")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    الاستدامة
+                    {lang == "ar"
+                      ? StringManager.sustain.ar
+                      : StringManager.sustain.en}
                   </a>
                 </div>
               </Col>
               <Col xs="12" lg="5" className="services d-inline-block">
                 <div className="links">
-                  <h6>خدمة الزبائن</h6>
+                  <h6>
+                    {lang == "ar"
+                      ? StringManager.customerService.ar
+                      : StringManager.customerService.en}{" "}
+                  </h6>
                   <a
                     onClick={() => navigate("/Questions")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    الأسئلة المتكررة
+                    {lang == "ar" ? StringManager.faq.ar : StringManager.faq.en}
                   </a>
                   <a
                     onClick={() => navigate("/ContactUs")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    اتصل بنا
+                    {lang == "ar"
+                      ? StringManager.contactUs.ar
+                      : StringManager.contactUs.en}
                   </a>
                   <a
                     // onClick={() => navigate("/")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    التواصل عبر واتساب
+                    {lang == "ar"
+                      ? StringManager.whatsApp.ar
+                      : StringManager.whatsApp.en}
                   </a>
                   <a
                     onClick={() => navigate("/WebsiteMap")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    خريطة الموقع
+                    {lang == "ar"
+                      ? StringManager.siteMap.ar
+                      : StringManager.siteMap.en}
                   </a>
                   <a
                     onClick={() => navigate("/location")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    محلاتنا
+                    {lang == "ar"
+                      ? StringManager.stores.ar
+                      : StringManager.stores.en}
                   </a>
                   <a
                     onClick={() => navigate("/Lighting")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    أثاث وإضاءة اتش آند ام هوم
+                    {lang == "ar"
+                      ? StringManager.furniture.ar
+                      : StringManager.furniture.en}
                   </a>
                   <a
                     onClick={() => navigate("/WeeklyGiftCardsPage")}
                     className="d-block text-decoration-none w-100 my-3 my-sm-1 my-lg-3"
                     href="#"
                   >
-                    بطاقة الهدايا الإلكترونية
+                    {lang == "ar"
+                      ? StringManager.eGift.ar
+                      : StringManager.eGift.en}
                   </a>
                 </div>
               </Col>
@@ -147,7 +184,12 @@ export default function Footer() {
                   className="w-100"
                   onClick={() => handleToggle("0")}
                 >
-                  <span> حول اتش آند ام</span>
+                  <span>
+                    {" "}
+                    {lang == "ar"
+                      ? StringManager.footerTitle.ar
+                      : StringManager.footerTitle.en}
+                  </span>
                   <span className="icon">
                     {activeKey === "0" ? <FaMinus /> : <FaPlus />}
                   </span>
@@ -159,49 +201,63 @@ export default function Footer() {
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      معلومات عنا
+                      {lang == "ar"
+                        ? StringManager.aboutUs.ar
+                        : StringManager.aboutUs.en}
                     </a>
                     <a
                       onClick={() => navigate("/DeliveryInformation")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      معلومات التوصيل
+                      {lang == "ar"
+                        ? StringManager.delivery.ar
+                        : StringManager.delivery.en}
                     </a>
                     <a
                       onClick={() => navigate("/PurchaseTerms")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      شروط وأحكام الشراء
+                      {lang == "ar"
+                        ? StringManager.termsSale.ar
+                        : StringManager.termsSale.en}
                     </a>
                     <a
                       onClick={() => navigate("/Terms")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      شروط وأحكام الموقع
+                      {lang == "ar"
+                        ? StringManager.webTerms.ar
+                        : StringManager.webTerms.en}
                     </a>
                     <a
                       onClick={() => navigate("/PrivacyPolicy")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      سياسة الخصوصية
+                      {lang == "ar"
+                        ? StringManager.privacyPolicy.ar
+                        : StringManager.privacyPolicy.en}
                     </a>
                     <a
                       onClick={() => navigate("/ReturnExchange")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      الإرجاع والاستبدال
+                      {lang == "ar"
+                        ? StringManager.returns.ar
+                        : StringManager.returns.en}
                     </a>
                     <a
                       onClick={() => navigate("/Sustainability")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      الاستدامة
+                      {lang == "ar"
+                        ? StringManager.sustain.ar
+                        : StringManager.sustain.en}
                     </a>
                   </div>
                 </Accordion.Body>
@@ -210,7 +266,12 @@ export default function Footer() {
               {/* Second Accordion Item */}
               <Accordion.Item eventKey="1">
                 <Accordion.Header onClick={() => handleToggle("1")}>
-                  <span> خدمة الزبائن</span>
+                  <span>
+                    {" "}
+                    {lang == "ar"
+                      ? StringManager.customerService.ar
+                      : StringManager.customerService.en}{" "}
+                  </span>
                   <span className="icon">
                     {activeKey === "1" ? <FaMinus /> : <FaPlus />}
                   </span>
@@ -222,49 +283,63 @@ export default function Footer() {
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      الأسئلة المتكررة
+                      {lang == "ar"
+                        ? StringManager.faq.ar
+                        : StringManager.faq.en}
                     </a>
                     <a
                       onClick={() => navigate("/ContactUs")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      اتصل بنا
+                      {lang == "ar"
+                        ? StringManager.contactUs.ar
+                        : StringManager.contactUs.en}
                     </a>
                     <a
                       onClick={() => navigate("/")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      التواصل عبر واتساب
+                      {lang == "ar"
+                        ? StringManager.whatsApp.ar
+                        : StringManager.whatsApp.en}
                     </a>
                     <a
                       // onClick={() => navigate("/")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      خريطة الموقع
+                      {lang == "ar"
+                        ? StringManager.siteMap.ar
+                        : StringManager.siteMap.en}
                     </a>
                     <a
                       onClick={() => navigate("/location")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      محلاتنا
+                      {lang == "ar"
+                        ? StringManager.stores.ar
+                        : StringManager.stores.en}
                     </a>
                     <a
                       onClick={() => navigate("/Lighting")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      أثاث وإضاءة اتش آند ام هوم
+                      {lang == "ar"
+                        ? StringManager.furniture.ar
+                        : StringManager.furniture.en}
                     </a>
                     <a
                       onClick={() => navigate("/WeeklyGiftCardsPage")}
                       className="d-block text-decoration-none w-100 my-3 my-md-2"
                       href="#"
                     >
-                      بطاقة الهدايا الإلكترونية
+                      {lang == "ar"
+                        ? StringManager.eGift.ar
+                        : StringManager.eGift.en}
                     </a>
                   </div>
                 </Accordion.Body>
@@ -277,23 +352,32 @@ export default function Footer() {
             className="px-md-0 px-lg-5 text-md-start mt-5 mt-md-0"
           >
             <div className="contact-us d-inline-block text-end px-2 px-md-0">
-              <h6>تواصل معنا</h6>
+              <h6>
+                {lang == "ar" ? StringManager.news.ar : StringManager.news.en}{" "}
+              </h6>
               <div className="text">
-                كن أول المطلعين على التشكيلات الجديدة و العروض الحصرية
-                والفعاليات في المحلات القريبة منك
+                {lang == "ar"
+                  ? StringManager.newsSub.ar
+                  : StringManager.newsSub.en}
               </div>
 
               <form className="mt-3 border-dark border-bottom border-1 d-inline-block w-100 d-flex justify-content-between">
                 <input
                   type="text"
                   className="input border-0 py-2 w-100"
-                  placeholder="أدخل بريدك الإلكتروني"
+                  placeholder={
+                    lang == "ar"
+                      ? StringManager.emailNews.ar
+                      : StringManager.emailNews.en
+                  }
                 />
                 <button
                   id="basic-addon1"
                   className="btn rounded-0 d-inline-block p-0 fw-bolder"
                 >
-                  سجل الآن
+                  {lang == "ar"
+                    ? StringManager.signUpnews.ar
+                    : StringManager.signUpnews.en}
                 </button>
               </form>
 
@@ -306,11 +390,21 @@ export default function Footer() {
         </Row>
         <div className="center text-center">
           <div className="head">
-            <p className="head p-1 m-0">خدمة العملاء</p>
-            <p className="p-1 m-0">مصر 24803822-02</p>
+            <p className="head p-1 m-0">
+              {" "}
+              {lang == "ar"
+                ? StringManager.tailtitle.ar
+                : StringManager.tailtitle.en}{" "}
+            </p>
             <p className="p-1 m-0">
-              أوقات العمل أيام السبت إلى الخميس من الساعة 9 صباحاً إلى 10 مساءً
-              و أيام الجمعة من الساعة 1 مساءً إلى 10 مساءً. (بتوقيت مصر)
+              {lang == "ar"
+                ? StringManager.tailFor.ar
+                : StringManager.tailFor.en}
+            </p>
+            <p className="p-1 m-0">
+              {lang == "ar"
+                ? StringManager.tailCont.ar
+                : StringManager.tailCont.en}
             </p>
             <img
               src={footerImage}
@@ -336,14 +430,19 @@ export default function Footer() {
           <Row className="justify-content-center m-0">
             <Col md="8" lg="5" className="mt-4 last">
               <p>
-                مفهوم الأعمال لدى H&M هو تقديم أحدث صيحات الموضة والجودة العالية
-                بأفضل الأسعار. ومنذ تأسيس H&M في عام 1947 نمت لتصبح واحدة من
-                شركات الأزياء الرائدة في العالم. حقوق النشر محفوظة لموقع شركة
-                H&M و هو مُلك Hennes H&M & Mauritz AB ©
+                {lang == "ar"
+                  ? StringManager.endCont.ar
+                  : StringManager.endCont.en}
               </p>
               <p>
-                <a href="#" className="text-decoration-none ">
-                  مصر
+                <a
+                  href="https://www.hm.com/entrance.ahtml?orguri=%2F"
+                  target="blank"
+                  className="text-decoration-none "
+                >
+                  {lang == "ar"
+                    ? StringManager.egypt.ar
+                    : StringManager.egypt.en}
                 </a>
               </p>
             </Col>
@@ -353,3 +452,5 @@ export default function Footer() {
     </>
   );
 }
+
+export default Footer;

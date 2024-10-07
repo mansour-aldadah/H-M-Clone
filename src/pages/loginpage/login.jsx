@@ -1,29 +1,48 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebook, FaGoogle } from "react-icons/fa"; // Importing social media icons
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./register.css"; // Import your custom CSS file
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 import "./Register.css"; // Import your custom CSS file
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const [lang, setLang] = useContext(langContext);
+
   const navigate = useNavigate();
 
   return (
     <section className="loginPage">
       <div className=" mb-4">
         <h4 className="text-right">
-          <strong>تسجيل دخول </strong>
+          <strong>
+            {lang == "ar"
+              ? StringManager.loginTitle.ar
+              : StringManager.loginTitle.en}
+          </strong>
         </h4>
         <Container fluid className="d-flex ">
           <Row className="w-100 row-style justify-content-center">
             <Col md={6} className="left-div">
               <p>
-                <strong>تسجيل الدخول عن طريق البريد الالكتروني</strong>
+                <strong>
+                  {" "}
+                  {lang == "ar"
+                    ? StringManager.loginSubTitle.ar
+                    : StringManager.loginSubTitle.en}{" "}
+                </strong>
               </p>
               <Form>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Control
                     type="email"
-                    placeholder="أدخل البريد الإلكتروني"
+                    placeholder={
+                      lang == "ar"
+                        ? StringManager.emailLabel.ar
+                        : StringManager.emailLabel.en
+                    }
                     className="border-top-only form-control shadow-none "
                     required
                   />
@@ -31,7 +50,11 @@ const LoginPage = () => {
                 <Form.Group controlId="formBasicPassword">
                   <Form.Control
                     type="password"
-                    placeholder="كلمة المرور"
+                    placeholder={
+                      lang == "ar"
+                        ? StringManager.passwordLabel.ar
+                        : StringManager.passwordLabel.en
+                    }
                     className="border-top-only form-control shadow-none "
                     required
                   />
@@ -43,17 +66,32 @@ const LoginPage = () => {
                   type="submit"
                   className="btn_style social-media-buttons border-0"
                 >
-                  تسجيل الدخول
+                  {lang == "ar"
+                    ? StringManager.signInButton.ar
+                    : StringManager.signInButton.en}
                 </Button>
+
+                <a href="/forgotpassword">
+                  {lang == "ar"
+                    ? StringManager.forgotPasswordLink.ar
+                    : StringManager.forgotPasswordLink.en}
+                </a>
+
                 <a onClick={() => navigate(`/forgetpassword`)}>
-                  هل نسيت كلمه السر؟
+                  {lang == "ar"
+                    ? StringManager.forgotPasswordLink.ar
+                    : StringManager.forgotPasswordLink.en}
                 </a>
               </Form>
             </Col>
 
             <Col md={6} className="right-div">
               <p>
-                <strong>او سجل عبر مواقع التواصل الاجتماعي</strong>
+                <strong>
+                  {lang == "ar"
+                    ? StringManager.signInWith.ar
+                    : StringManager.signInWith.en}{" "}
+                </strong>
               </p>
               <div>
                 <Button
@@ -65,7 +103,9 @@ const LoginPage = () => {
                   }
                 >
                   <FaFacebook size={20} className="me-2" />
-                  سجل الدخول عن طريق الفيس بوك
+                  {lang == "ar"
+                    ? StringManager.facebookSignIn.ar
+                    : StringManager.facebookSignIn.en}
                 </Button>
                 <Button
                   variant="outline-dark"
@@ -76,16 +116,25 @@ const LoginPage = () => {
                   }
                 >
                   <FaGoogle size={20} className="me-2" />
-                  سجل الدخول عن طريق جوجل
+                  {lang == "ar"
+                    ? StringManager.googleSignIn.ar
+                    : StringManager.googleSignIn.en}
                 </Button>
-                <p>ليس لديك حساب؟</p>
+                <p>
+                  {lang == "ar"
+                    ? StringManager.dontHaveAcc.ar
+                    : StringManager.dontHaveAcc.en}{" "}
+                </p>
                 <Button
                   variant="outline-dark"
                   className="mb-2 social-media-buttons "
                   // style={{ width: '100%'  }}
+
                   onClick={() => navigate(`/register`)}
                 >
-                  سجل هنا
+                  {lang == "ar"
+                    ? StringManager.signUpLink.ar
+                    : StringManager.signUpLink.en}
                 </Button>
               </div>
             </Col>

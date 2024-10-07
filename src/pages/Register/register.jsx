@@ -1,30 +1,48 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebook, FaGoogle } from "react-icons/fa"; // Importing social media icons
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./register.css"; // Import your custom CSS file
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 import "./Register.css"; // Import your custom CSS file
 import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+  const [lang, setLang] = useContext(langContext);
   const navigate = useNavigate();
 
   return (
     <section className="registerPage">
       <div className=" mb-4">
         <h3 className="text-right">
-          <strong>انشاء حساب جديد</strong>
+          <strong>
+            {lang == "ar"
+              ? StringManager.registerPageTitle.ar
+              : StringManager.registerPageTitle.en}{" "}
+          </strong>
         </h3>
         <Container fluid className="d-flex ">
           <Row className="w-100 row-style justify-content-center">
             <Col md={6} className="left-div">
               <p>
-                <strong>سجل باستخدام البريد الالكتروني</strong>
+                <strong>
+                  {lang == "ar"
+                    ? StringManager.registerSubTitle.ar
+                    : StringManager.registerSubTitle.en}
+                </strong>
               </p>
               <Form>
                 <Form.Group controlId="formName">
                   <Form.Control
                     className="border-top-only form-control shadow-none "
                     type="text"
-                    placeholder="الاسم كامل"
+                    placeholder={
+                      lang == "ar"
+                        ? StringManager.fullName.ar
+                        : StringManager.fullName.en
+                    }
                     name="name"
                     required
                   />
@@ -32,7 +50,11 @@ const RegisterPage = () => {
                 <Form.Group controlId="formBasicEmail">
                   <Form.Control
                     type="email"
-                    placeholder="أدخل البريد الإلكتروني"
+                    placeholder={
+                      lang == "ar"
+                        ? StringManager.email.ar
+                        : StringManager.email.en
+                    }
                     className="border-top-only form-control shadow-none "
                     required
                   />
@@ -40,7 +62,11 @@ const RegisterPage = () => {
                 <Form.Group controlId="formBasicPassword">
                   <Form.Control
                     type="password"
-                    placeholder="كلمة المرور"
+                    placeholder={
+                      lang == "ar"
+                        ? StringManager.password.ar
+                        : StringManager.password.en
+                    }
                     className="border-top-only form-control shadow-none "
                     required
                   />
@@ -48,15 +74,33 @@ const RegisterPage = () => {
                 <br />
                 <p>
                   <input type="checkbox" id="rememberMe" name="rememberMe" />
-                  ارغب في استلام عروض حصريه من اتش اند ام
+                  {lang == "ar"
+                    ? StringManager.exclusiveDeals.ar
+                    : StringManager.exclusiveDeals.en}
                 </p>
                 <p>
-                  تسجيل بياناتك يعني موافقتك على .
+                  {lang == "ar"
+                    ? StringManager.termsAndConditions.ar
+                    : StringManager.termsAndConditions.en}
+                  &nbsp;
+                  <a
+                    onClick={() => navigate(`/Terms`)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {lang == "ar"
+                      ? StringManager.termsAndConditionsLink.ar
+                      : StringManager.termsAndConditionsLink.en}
+                    &nbsp;
+                  </a>
+                  {lang == "ar" ? StringManager.and.ar : StringManager.and.en}
+                  &nbsp;
                   <a
                     onClick={() => navigate(`/PrivacyPolicy`)}
                     style={{ cursor: "pointer" }}
                   >
-                    الشروط والأحكام و سياسة الخصوصية.
+                    {lang == "ar"
+                      ? StringManager.privacyAndPolicyLink.ar
+                      : StringManager.privacyAndPolicyLink.en}
                   </a>
                 </p>
                 <Button
@@ -64,14 +108,20 @@ const RegisterPage = () => {
                   type="submit"
                   className="btn_style social-media-buttons border-0"
                 >
-                  انشاء حساب جديد
+                  {lang == "ar"
+                    ? StringManager.createAnAcc.ar
+                    : StringManager.createAnAcc.en}
                 </Button>
               </Form>
             </Col>
 
             <Col md={6} className="right-div">
               <p>
-                <strong>او سجل عبر مواقع التواصل الاجتماعي</strong>
+                <strong>
+                  {lang == "ar"
+                    ? StringManager.signInWith.ar
+                    : StringManager.signInWith.en}
+                </strong>
               </p>
               <div>
                 <Button
@@ -83,7 +133,9 @@ const RegisterPage = () => {
                   }
                 >
                   <FaFacebook size={20} className="me-2" />
-                  سجل الدخول عن طريق الفيس بوك
+                  {lang == "ar"
+                    ? StringManager.facebookSignIn.ar
+                    : StringManager.facebookSignIn.en}
                 </Button>
                 <Button
                   variant="outline-dark"
@@ -94,16 +146,24 @@ const RegisterPage = () => {
                   }
                 >
                   <FaGoogle size={20} className="me-2" />
-                  سجل الدخول عن طريق جوجل
+                  {lang == "ar"
+                    ? StringManager.googleSignIn.ar
+                    : StringManager.googleSignIn.en}
                 </Button>
-                <p>هل لديك حساب؟</p>
+                <p>
+                  {lang == "ar"
+                    ? StringManager.alreadyHaveAcc.ar
+                    : StringManager.alreadyHaveAcc.en}{" "}
+                </p>
                 <Button
                   variant="outline-dark"
                   className="mb-2 social-media-buttons "
                   // style={{ width: '100%'  }}
                   onClick={() => navigate(`/login`)}
                 >
-                  سجل هنا
+                  {lang == "ar"
+                    ? StringManager.signInButton.ar
+                    : StringManager.signInButton.en}
                 </Button>
               </div>
             </Col>

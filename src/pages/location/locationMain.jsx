@@ -2,24 +2,38 @@ import React from "react";
 import { Container, Row, Col, Form, ListGroup } from "react-bootstrap";
 import "./locationMain.css"; // Import custom styles
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 import {
   faNavicon,
   faMap,
   faSearch,
-  faLocationCrosshairs
+  faLocationCrosshairs,
 } from "@fortawesome/free-solid-svg-icons";
+
 const StoreSearch = () => {
+  const [lang, setLang] = useContext(langContext);
   return (
     <section className="locationMain">
       <Container fluid>
         <Row>
           <Col>
             <h4>
-              <strong>محلاتنا</strong>
+              <strong>
+                {lang == "ar"
+                  ? StringManager.locationTitle.ar
+                  : StringManager.locationTitle.en}
+              </strong>
             </h4>
             <br />
             <h4>
-              <strong>البحث عن المحلات</strong>
+              <strong>
+                {" "}
+                {lang == "ar"
+                  ? StringManager.findStores.ar
+                  : StringManager.findStores.en}{" "}
+              </strong>
             </h4>
             <hr />
           </Col>
@@ -29,13 +43,17 @@ const StoreSearch = () => {
           <Col xs={1} md={1} className="red">
             <FontAwesomeIcon icon={faLocationCrosshairs} className="me-2 red" />
             <a href="/your-target-url" style={{ border: "none" }}>
-              المحلات القريبة مني
+              {lang == "ar" ? StringManager.nearMe.ar : StringManager.nearMe.en}
             </a>
           </Col>
           <Col xs={2} md={2}>
             <p>
               <FontAwesomeIcon icon={faSearch} className="me-2" />
-              <strong>البحث عن أقرب المحلات إليك</strong>
+              <strong>
+                {lang == "ar"
+                  ? StringManager.findNear.ar
+                  : StringManager.findNear.en}
+              </strong>
             </p>
           </Col>
           <Col xs={4} md={4}>
@@ -50,26 +68,34 @@ const StoreSearch = () => {
           <Col xs={2} md={2} className="hover-col">
             <a href="/your-target-url" style={{ border: "none" }}>
               <FontAwesomeIcon icon={faNavicon} className="me-2" />
-              عرض الخريطه
+              {lang == "ar"
+                ? StringManager.mapView.ar
+                : StringManager.mapView.en}
             </a>
           </Col>
           <Col xs={2} md={2} className="hover-col">
             <a href="/your-target-url" style={{ border: "none" }}>
               <FontAwesomeIcon icon={faMap} className="me-2" />
-              عرض القائمة
+              {lang == "ar"
+                ? StringManager.listView.ar
+                : StringManager.listView.en}
             </a>
           </Col>
         </Row>
         <hr />
         <p>
-          <strong>اختر محل للاطلاع على</strong>
+          <strong>
+            {lang == "ar"
+              ? StringManager.selectStore.ar
+              : StringManager.selectStore.en}
+          </strong>
         </p>
         <Row>
           <Col xs={12} md={5} className="sidebar">
             <ListGroup variant="flush">
               <ListGroup.Item className="letter-item">
                 <span className="letter-list">ك</span>
-                <a href="">كايرو فيستيفال سيتي</a>
+                <a href="">كايرو فيستفال سيتي</a>
               </ListGroup.Item>
               <ListGroup.Item className="letter-item">
                 <span className="letter-list">م</span>
