@@ -15,7 +15,7 @@ import {
 const StoreSearch = () => {
   const [lang, setLang] = useContext(langContext);
   return (
-    <section className="locationMain">
+    <section className="locationMain m-auto">
       <Container fluid>
         <Row>
           <Col>
@@ -57,28 +57,36 @@ const StoreSearch = () => {
             </p>
           </Col>
           <Col xs={4} md={4}>
-            <Form.Control type="text" placeholder="ابحث عن أقرب المحلات إليك">
-              {/* <FontAwesomeIcon icon={faSearch} className="me-2" /> */}
-            </Form.Control>
-            {/* <Button variant="outline-primary" className="p-0 me-2 "> */}
-            <FontAwesomeIcon icon={faSearch} className="me-2" />
-            {/* </Button> */}
+            <div className="d-flex align-items-center">
+              <Form.Control type="text" placeholder="ابحث عن أقرب المحلات إليك">
+                {/* <FontAwesomeIcon icon={faSearch} className="me-2" /> */}
+              </Form.Control>
+              {/* <Button variant="outline-primary" className="p-0 me-2 "> */}
+              <FontAwesomeIcon icon={faSearch} className="m-2" />
+              {/* </Button> */}
+            </div>
           </Col>
 
-          <Col xs={2} md={2} className="hover-col">
-            <a href="/your-target-url" style={{ border: "none" }}>
-              <FontAwesomeIcon icon={faNavicon} className="me-2" />
-              {lang == "ar"
-                ? StringManager.mapView.ar
-                : StringManager.mapView.en}
-            </a>
+          <Col xs={2} md={2} className="">
+            <div className=" d-flex justify-content-center back-button ">
+              <a
+                href="/your-target-url"
+                style={{ border: "none" }}
+                className=" d-flex justify-content-center align-items-center"
+              >
+                <FontAwesomeIcon icon={faNavicon} />
+                {lang == "ar"
+                  ? StringManager.listView.ar
+                  : StringManager.listView.en}
+              </a>
+            </div>
           </Col>
           <Col xs={2} md={2} className="hover-col">
             <a href="/your-target-url" style={{ border: "none" }}>
               <FontAwesomeIcon icon={faMap} className="me-2" />
               {lang == "ar"
-                ? StringManager.listView.ar
-                : StringManager.listView.en}
+                ? StringManager.mapView.ar
+                : StringManager.mapView.en}
             </a>
           </Col>
         </Row>

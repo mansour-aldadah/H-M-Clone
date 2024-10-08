@@ -14,17 +14,17 @@ const RegisterPage = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="registerPage">
+    <section className="registerPage m-auto" style={{ width: "80%" }}>
       <div className=" mb-4">
-        <h3 className="text-right">
+        <h3 className="m-2">
           <strong>
             {lang == "ar"
               ? StringManager.registerPageTitle.ar
               : StringManager.registerPageTitle.en}{" "}
           </strong>
         </h3>
-        <Container fluid className="d-flex ">
-          <Row className="w-100 row-style justify-content-center">
+        <Container fluid className="d-flex justify-content-around">
+          <Row className="w-100 row-style ">
             <Col md={6} className="left-div">
               <p>
                 <strong>

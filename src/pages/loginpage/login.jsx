@@ -14,9 +14,9 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="loginPage">
+    <section className="loginPage m-auto mb-5" style={{ width: "80%" }}>
       <div className=" mb-4">
-        <h4 className="text-right">
+        <h4 className="m-2">
           <strong>
             {lang == "ar"
               ? StringManager.loginTitle.ar
@@ -71,11 +71,11 @@ const LoginPage = () => {
                     : StringManager.signInButton.en}
                 </Button>
 
-                <a href="/forgotpassword">
+                {/*  <a href="/forgotpassword">
                   {lang == "ar"
                     ? StringManager.forgotPasswordLink.ar
                     : StringManager.forgotPasswordLink.en}
-                </a>
+                </a> */}
 
                 <a onClick={() => navigate(`/forgetpassword`)}>
                   {lang == "ar"

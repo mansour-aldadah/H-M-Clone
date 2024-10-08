@@ -302,6 +302,7 @@ question11Branche13:{en:"•    Dokki Shooting Club Street", ar:"• الدقي�
     listView:{en:"LIST VIEW", ar:"عرض القائمة"},
     mapView:{en:"MAP VIEW", ar:"عرض الخريطة"},
     selectStore:{en:"select a store to see details", ar:"اختر محل للإطلاع على التفاصيل"},
+    
 
 /*     a:{en:"A", ar:"ك"},
     p:{en:"P", ar:"ب"},
