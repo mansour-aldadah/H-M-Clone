@@ -24,7 +24,7 @@
 
 .locationMain .back-button {
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #222222;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -71,7 +71,7 @@
 
 .locationMain p {
   font-size: 12px;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .locationMain .hover-col {
@@ -91,7 +91,7 @@
 }
 
 .locationMain h4 {
-  text-align: right;
+  /* text-align: right; */
 }
 
 .locationMain span {
