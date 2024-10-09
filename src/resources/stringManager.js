@@ -302,7 +302,7 @@ question11Branche13:{en:"•    Dokki Shooting Club Street", ar:"• الدقي�
     listView:{en:"LIST VIEW", ar:"عرض القائمة"},
     mapView:{en:"MAP VIEW", ar:"عرض الخريطة"},
     selectStore:{en:"select a store to see details", ar:"اختر محل للإطلاع على التفاصيل"},
-    
+
 
 /*     a:{en:"A", ar:"ك"},
     p:{en:"P", ar:"ب"},
@@ -323,6 +323,199 @@ question11Branche13:{en:"•    Dokki Shooting Club Street", ar:"• الدقي�
     explore:{en:"Explore the delivery options applicable to your area.", ar:"اكتشف خيارات التوصيل المتاحة في منطقتك"},
     clickC:{en:"Available to collect in 2-5 days", ar:"استلم طلبيتك من المحل خلال 2-5 يوم"},
 
+
+    // Contact Us Page
+    contactUsTitle:{en:"Contact Us", ar:"اتصل بنا"},
+    preferedChannel:{en:"Select Your Preferd Communication Channel", ar:"حدد قناة الاتصال المفضلة لديك"},
+    emailContact:{en:"Email", ar:"البريد الإلكتروني"},
+    phone:{en:"Mobile", ar:"رقم الجوال"},
+    fName:{en:"First Name", ar:"الاسم الأول"},
+    lName:{en:"Last Name", ar:"اسم العائلة"},
+    mobileNum:{en:"Mobile number", ar:"رقم الجوال"},
+    emailAddress:{en:"Email Address", ar:"البريد الالكتروني"},
+    feedBack:{en:"SELECT FEEDBACK", ar:"ملاحظات"},
+    onlineShop:{en:"ONLINE SHOPPING", ar:"التسوق أونلاين"},
+    inquiryFeed:{en:"FEEDBACK INQUIRY", ar:"الملاحظات والإستفسارات"},
+    type:{en:"SELECT TYPE", ar:"النوع"},
+    inquiry:{en:"INQUIRY", ar:"الإستفسار"},
+    complaint:{en:"COMPLAINT", ar:"الشكوى"},
+    selectReason:{en:"SELECT REASON", ar:"حدّد السبب"},
+    shaya:{en:"ALSHAYA PRIVILEGES CLUB", ar:"نادي إمتيازات الشايع"},
+    faultyItems:{en:"FAULTY ITEMS", ar:"منتجات معيبة"},
+    shayaCard:{en:"ALSHAYA CARD", ar:"بطاقة الشايع"},
+    notReceived:{en:"REFUND NOT RECEIVED", ar:"لم يتم استلام المبلغ"},
+    inStoreServ:{en:"IN STORE SERVICES", ar:"الخدمات المتوفرة داخل المحل"},
+    others:{en:"OTHERS", ar:"أخرى"},
+    orderNum:{en:"Order number (Optional)", ar:"رقم الطلبية (اختياري)"},
+    missingItems:{en:"Missing items (Optional)", ar:"العناصر المفقودة (اختياري)"},
+    message:{en:"Message", ar:"رسالة نصية"},
+
+
+    // About us page
+    aboutUSTitle:{en:"H&M GROUP AT A GLANCE", ar:"مجموعة اتش اند ام"},
+    aboutUSpas1:{en:"The H&M group is one of the world’s leading fashion companies – with the brands H&M and H&M Home, COS, & Other Stories, Monki, Weekday Cheap Monday and ARKET. Each with its own unique identity, all our brands are united by a passion for fashion and quality and the drive to dress customers in a sustainable way.", ar:`
+            تعد مجموعة اتش آند ام واحدة من شركات الأزياء الرائدة في العالم –
+            وبالإضافة إلى اتش آند ام، تضم المجموعة علامات أذر ستوريز، وكوس،
+            وCheap Monday، وMonki، وWeekday، واتش آند ام هوم. وتتميز جميع منتجات
+            اتش آند ام بكونها متفردة بهويتها ومتحدة بشغفها وتطلعها لعالم الأزياء
+            والموضة، ودائماً ما تسعى إلى ضمان جودة منتجاتها وتقديمها بطريقة
+            مستدامة لزبائنها.`},
+
+    aboutUSTitle2:{en:"FASHION LOVED BY MANY", ar:"الأزياء التي يحبها الجميع"},
+    aboutUSpas2:{en:"It all started with a single womenswear store in Västerås, Sweden, in 1947. Today, the H&M group has several clearly defined fashion brands and a strong global presence. Our expansion is long-term and we grow both online and with new stores, in existing as well as new markets. We want to make sustainable, good-quality fashion accessible to as many people as possible.", ar:`
+                بدأ كل شيء مع متجر واحد لبيع الملابس النسائية في مدينة فيستيروس،
+                السويد، في عام 1947. أما اليوم، فإن مجموعة اتش آند ام لديها
+                العديد من العلامات التجارية الخاصة بالأزياء وتتميز بحضور وتواجد
+                عالمي قوي. وقد توسعنا على المدى الطويل من خلال مواقعنا على
+                الانترنت ومتاجرنا الجديدة في الأسواق في كل مكان. مهمتنا هي توفير
+                أزياء ذات جودة عالية في متناول أكبر عدد ممكن من الناس.`},
+
+    aboutUSTitle3:{en:"HOW WE DO IT", ar:"كيف نقوم بمهمتنا"},
+    aboutUSpas3:{en:"We want to make fashion sustainable and sustainability fashionable. The commitment of our employees is key to our success. We are dedicated to creating a better fashion future and we use our size and scale to drive development towards a more circular, fair and equal fashion industry.", ar:`
+                نسعى دوماً لتقديم أفضل الأزياء المستدامة لزبائننا، كما أن التزام
+                موظفينا هو عامل أساسي من نجاحنا. ولتحقيق النجاح فإننا نحرص دوماً
+                على خلق مستقبل أفضل للأزياء، ونقوم باستغلال قدراتنا في السوق
+                لتنمية بيئة صناعة أزياء مثالية حول العالم.`},
+
+    
+    aboutUSTitle4:{en:"WHO WE ARE", ar:"من نحن"},
+    aboutUSpas4:{en:"The H&M group joins together more than 161,000 colleagues from different backgrounds and nationalities across the world. We are dedicated to always create the best offering and the best experience for our customers. We all share a values-driven way of working, based on a fundamental respect for the individual. Our shared values help create an open, dynamic and down-to-earth company culture where anything is possible.", ar:`
+                تضم مجموعة اتش آند ام أكثر من 161,000 موظف من جنسيات وخلفيات
+                مختلفة حول العالم حريصون أشد الحرص على خلق أفضل العروض وأفضل
+                تجارب التسوق للزبائن. جميعنا في اتش آند ام نتشارك في طريقة عمل
+                تستند على القيم، ومبنية على احترام الزبون بشكل أساسي. وتشتمل
+                قيمنا التي نتشاركها على المساعدة في خلق ثقافة شركة مفتوحة
+                وديناميكية ومتاحة ومتوفرة للجميع.`},
+
+    aboutUSFegures:{en:"FIGURES", ar:"إحصائيات مهمة"},
+    aboutUSfigure1:{en:"We welcomed 13,000 new colleagues in 2016, taking our team to 161,000.", ar:`
+                    لقد قامت مجموعة اتش آند ام بتوظيف 13,000 موظف جديد في عام
+                    2016، لنصل بذلك إلى فريق عمل يتكون من 161,000 موظف.`},
+    aboutUSfigure2:{en:"The H&M group’s sales including VAT reached SEK 223 billion in 2016.", ar:`
+                    بلغت مبيعات مجموعة اتش آند ام بما في ذلك ضريبة القيمة
+                    المضافة 223 مليار كرونة سويدية في عام 2016.`},
+    aboutUSfigure3:{en:"We have 43 online markets and more than 4,500 stores in 69 markets.", ar:` لدينا 43 سوق على الانترنت وأكثر من 4500 متجر في 69 سوق.`},
+
+    aboutUSknow:{en:"DID YOU KNOW", ar:"هل تعلم"},
+    aboutUSinfo1:{en:"96% of the electricity we used in 2016 came from renewable sources.", ar:`
+                    أن 96% من الكهرباء التي استخدمناها في عام 2016 قادمة من
+                    مصادر متجددة.`},
+    aboutUSinfo2:{en:"We reduced greenhouse gas emissions by 47% in 2016.", ar:`
+                    أننا قمنا بالتقليل من الغازات المنبعثة بنسبة 47% في عام
+                    2016.`},
+    aboutUSinfo3:{en:"Our business helps create about 1.6 million jobs for people employed by our suppliers in the textile industry", ar:`
+                    أننا ساعدنا بخلق حوالي 1.6 مليون فرصة وظيفية للأشخاص
+                    العاملين لدى موردينا في قطاع صناعة النسيج.`},
+    aboutUSinfo4:{en:"Our stores have collected more than 55,000 tonnes of clothing for reuse and recycling since 2013.", ar:`
+                    أن متاجرنا قامت بجمع أكثر من 55,000 طن من الملابس منذ عام
+                    2013، وذلك لإعادة استخدامها وإعادة تدويرها.`},
+
+
+
+    // E gift cards page
+    eGiftcardTitle:{en:"H&M e-Gift Cards", ar:" بطاقات الهدايا الإلكترونية من اتش آند ام"},
+    eGiftcardDesc:{en:"Let those close to you enjoy the freedom of choice with an eGift Card - the perfect gift for your friends, colleagues and your loved ones.", ar:`
+              دع أحباءك يستمتعون بحرية الاختيار مع بطاقة الهدايا الإلكترونية -
+              الهدية المثالية لجميع المناسبات.`},
+    buyButton:{en:"Buy eGift Cards", ar:"شراء بطاقة الهدايا"},
+    linkButton:{en:"Link To Account", ar:"ربط الحساب"},
+
+    checkBalance:{en:"Check eGift Card Balance", ar:"تحقق من رصيد البطاقة"},
+    checkBalanceDesc:{en:"Keep loading your eGift Card balance to use it for your purchase.", ar:"قم بإعادة تعبئة بطاقة الهدايا الإلكترونية الخاص بك لاستخدامها في عمليات الشراء"},
+    checkBalanceLink:{en:"Check Now", ar:"تحقق من الرصيد"},
+
+    reloadEgift:{en:"Reload eGift Card", ar:"تعبئة البطاقة"},
+    reloadEgiftDesc:{en:"Reload you existing eGift Card with custom or preset value options.", ar:"يمكنك تعبئة البطاقة عبر اختيار أحد الخيارات المتوفرة مسبقاً أو إدخال مبلغ مخصص"},
+    reloadEgiftLink:{en:"Reload Now", ar:"تعبئة البطاقة"},
+
+    bestGiftsTitle:{en:"The ultimate gift is just a click away!", ar:"أفضل الهدايا بضغطة واحدة!"},
+    bestGiftsPas1:{en:"Giving a gift to someone we hold dear; shows how much we appreciate them.", ar:"إن تقديم الهدايا إلى شخص ما هو الوسيلة الأمثل للتعبير عن مدى تقديرنا له. إذ أنه ينعكس على كل من مُقدّم الهدية ومتلقيها كطريقة مميزة لتعزيز علاقتهم الفريدة. أو بعبارة أخرى، الهدية تقدم بوصفها رمزاً أو وسيلة للتعبير عن الحب والمشاعر التي نكنها لأشخاص يحتلون في قلوبنا مكانة عظيمة، بغض النظر عن وقت أو مناسبة تقديمها."},
+    bestGiftsPas2:{en:"But since selecting the perfect gift seems like an impossible challenge sometimes, we are offering you an easy way to gift your loved ones what they really want! ", ar:"قد يمثّل اختيار الهدية الأفضل تحدياً بالنسبة للبعض، لذا وفرنا لكم طريقة سهلة لإهداء أحبائكم الهدايا التي يعشقونها."},
+    bestGiftsPas3:{en:`We bring you our online exclusive H&M eGift Cards.
+    Whatever the occasion, our eGift Cards are exactly what you’re looking for as a gift. Your friends and family can shop for what they want, across H&M online MENA markets.`, ar:"إليكم بطاقة الهدايا الإلكترونية من إتش أند إم المتوفرة حصرياً أونلاين والتي تعتبر من أفضل الوسائل لكي تعبّروا لأحبائكم عن مدى انتباهكم ورغبتكم في تلبية احتياجاتهم. إن هذه البطاقة هي بالضبط ما تبحثون عنه كهدية، فهي مُبهرة وتلائم جميع المناسبات. إذ أنها تتيح للأصدقاء والعائلة تسوق جميع مستلزماتهم من إتش أند إم عبر الموقع الإلكتروني. كما أنها تراعي احتياجات أحبائك وتضمن لهم متعة وراحة التسوق في أيّ وقت ومكان، فضلاً عن إمكانية الانتظار للاستفادة من التنزيلات الموسمية لتسوق جميع منتجاتنا مثل الفساتين، والبلوزات، والتيشيرتات، والقمصان، وملابس السباحة، والأحذية، ومنتجات التجميل، والإكسسوارات ومنتجات المنزل وغيرها كثير."},
+    bestGiftsPas4:{en:`From clothes and outfits, shop all your needs and wants from our brands using one card!
+    Whether it’s a wedding, birthday, anniversary, or a reason to say, ‘Thank you’, use our online eGift Cards to shower your loved ones with presents.`, ar:`يمكنكم تسوق جميع احتياجاتكم من علاماتنا التجارية من الملابس، باستخدام بطاقة واحدة. سواء أكانت المناسبة حفل زفاف، أو عيد ميلاد أو ذكرى سنوية أو حتى بدون مناسبة، يمكنكم استخدام بطاقة الهدايا الإلكترونية كعذر لتغمروا أحبائكم بالهدايا.`},
+    conclusine:{en:"So, gift it with confidence!", ar:"لذا اطمئنوا وقدّموها لأحبائكم بثقة!"},
+
+    eGiftTerms:{en:"eGift Cards Terms & Conditions", ar:"الشروط والأحكام لبطاقات الهدايا الإلكترونية"},
+
+    general:{en:"General", ar:"الشروط العامة"},
+    generalCont:{en:"You can purchase an H&M eGift card directly from our sites. Choose one of the many colorful designs we have for your special occasion, whether it be for a friend, a partner, a family member, or yourself.", ar:`
+                  تسري هذه الشروط والأحكام على بطاقات هدايا اتش آند ام التي تم
+                  شرائها عبر مواقعنا الإلكترونية. إن شراؤك لبطاقات هدايا اتش آند
+                  ام الإلكترونية يعني موافقتك على هذه الشروط والإحكام ("الشروط
+                  والأحكام").
+                  
+                  تحتفظ اتش آند ام بالحق في تفسير أو تعديل أو إنهاء هذه الشروط
+                  والإحكام بدون إشعار مسبق. سوف يتم دائماً نشر آخر تحديثات
+                  الشروط والأحكام عبر موقعنا الإلكتروني. إن بطاقة هدايا اتش آند
+                  الإلكترونية قابلة للاستخدام عبر الموقع الإلكتروني. <br> 
+                  يمكنك استخدام البطاقة في دفع القيمة الكاملة أو جزء من قيمة
+                  المنتجات المختارة. إذا لم تغطي بطاقة هدايا اتش آند ام
+                  الإلكترونية القيمة الكاملة لعملية الشراء عبر الموقع، فيمكنك
+                  استخدام وسيلة دفع إضافية لإتمام عملية الشراء. يرجى قراءة
+                  المزيد في قسم الدفع. <br> 
+
+                 
+                  ستتيح الفاتورة دائماً معرفة الرصيد الحالي لبطاقة الهدايا
+                  الإلكترونية المستخدمة في إتمام عملية الشراء. ليس ذلك فحسب، بل
+                  يمكنك التحقق من الرصيد عبر الموقع أو في أيّ من محلات اتش آند
+                  ام أو من خلال التواصل مع `},
+    paymentAndDelivery:{en:"Payment&Delivery", ar:"الدفع والتسليم"},
+    paymentAndDeliveryCont:{en:`If you order your H&M eGift Card online it will be sent to the chosen recipient's email address, immediately after the purchase is complete, so you are you are obligated to provide a correct email address for delivery.
+
+If the email address you have provided cannot be confirmed H&M reserves the right to withhold the delivery of the H&M eGift Cards. However, your credit/debit card statement will show H&M eGift Card Purchase. We accept credit/debit cards as payment for H&M eGift Cards`, ar:`إذا قمت بطلب بطاقة هدايا اتش آند ام الإلكترونية عبر الموقع الإلكتروني، فسيتم إرسالها إلى عنوان البريد الإلكتروني للمستلم المختار بعد إتمام عملية الشراء.
+
+لذا يجب عليك إدخال عنوان بريد إلكتروني صحيح للاستلام. إذا تعذر تأكيد عنوان البريد الإلكتروني المستخدم، فإن اتش آند ام تحتفظ بالحق في منع تسليم بطاقات اتش آند ام الإلكترونية.
+
+علماً بأن بطاقة السحب الآلي/ البطاقة الائتمانية سوف تظهر شراؤك لبطاقة هدايا اتش آند ام الإلكترونية.
+
+نقبل الدفع ببطاقات السحب الآلي/ البطاقات الائتمانية عند شراء بطاقة هدايا اتش آند ام الإلكترونية.`},
+
+    validity:{en:"Validity", ar:"الصلاحية"},
+    validityCont:{en:`Each online purchase of H&M eGift Cards is limited to a maximum value of EGP 50.000. The online minimum value for H&M Gift Cards is EGP 250.
+
+We offer multiple value options for you to select from or you can enter a custom amount instead. H&M Gift Cards are valid for 1 year from the date of the last activation or purchase.`, ar:`تبلغ قيمة الحد الأقصى لعملية شراء بطاقات هدايا اتش آند ام الإلكترونية عبر موقعنا 50.000 ج.م فقط. فيما تبلغ قيمة الحد الأدنى 250 ج.م. نوفر خيارات متعددة القيمة لكي يتسنى لك الاختيار منها أو تخصيص المبلغ الذي يلائمك بدلاً من ذلك.
+
+إن بطاقات هدايا اتش آند ام الإلكترونية سارية لمدة عام واحد من تاريخ آخر تفعيل أو عملية الشراء.`},
+    limitedLiability:{en:"Limited Liability", ar:"مسئولية محدودة"},
+    limitedLiabilityCont:{en:`H&M cannot be held liable for H&M eGift Cards once activated, which subsequently are lost, stolen, inactivated or damaged. Treat your H&M eGift Cards as cash.`, ar:`
+                  بمجرد تفعيل بطاقات هدايا اتش آند الإلكترونية، لن تتحمل اتش آند
+                  ام أيّ مسؤولية في حال الفقدان، السرقة، التعطّل أو التلف. تعامل
+                  مع بطاقة الهدايا الإلكترونية كتعاملك مع السيولة النقدية.`},
+
+    privacyPolicyCont:{en:`You can use your H&M eGift card at any of our stores by showing your QR code at the checkout counter. You can access it through your email or by logging into your account through our site or app.
+
+eGift cards can't be used to top up nor purchase another eGift card.`, ar:`يمكنك استخدام بطاقة الهدايا الإلكترونية من اتش آند ام في أي من محلاتنا من خلال إظهار رمز الاستجابة السريعة (QR) الخاص بك عند الكاشير. بإمكانك الوصول إليها من خلال بريدك الإلكتروني أو عن طريق تسجيل الدخول إلى حسابك من خلال مواقعنا أو تطبيقنا.
+
+لا يُمكن استخدام بطاقة الهدايا الإلكترونية لزيادة رصيد أو شراء بطاقة هدايا إلكترونية أخرى.`},
+
+customerServiceCont:{en:`You can always contact our customer service team through our contact us page by clicking`, ar:`
+                  يمكنك دائماً التواصل مع فريق خدمة الزبائن من خلال صفحة اتصل
+                  بنا من`},
+    here:{en:"Here", ar:"هنا"},
+
+    li1:{en:"Buy eGift Cards online — all you need to know", ar:`
+              أين يمكن استخدامها ؟ بطاقة هدايا اتش آند ام الإلكترونية قابلة
+              للاستخدام عبر الموقع الإلكتروني.`},
+    li2:{en:" You can use your H&M eGift Card to make full, or partial payments. ", ar:`
+              يمكنك استخدام البطاقة في دفع القيمة الكاملة أو جزء من قيمة
+              المنتجات المختارة.`},
+    li3:{en:"Your desired amount will be deducted from your card and any remaining balance will be displayed on your receipt.", ar:`
+              سيتم اقتطاع المبلغ المراد من البطاقة وسيظهر المبلغ المتبقي في
+              الفاتورة.`},
+
+    knowPrivacyPolicy:{en:"Find our Privacy Policy in full ", ar:"تعرف على سياسة الخصوصية من"},
+
+
+
+
+
+
+
+    
+
+        
 
 
 

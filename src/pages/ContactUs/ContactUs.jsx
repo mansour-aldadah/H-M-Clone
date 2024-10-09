@@ -5,11 +5,15 @@ import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { useState } from "react";
 import { faN } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 
 export default function ContactUs() {
   const [first, setFirst] = useState("ملاحظات");
   const [second, setSecond] = useState("النوع");
   const [third, setThird] = useState();
+  const [lang, setLang] = useContext(langContext);
 
   const handleFirstSelectChange = (e) => {
     setFirst(e.target.value);
@@ -21,16 +25,28 @@ export default function ContactUs() {
     <section className="call-us">
       <Container className="py-3">
         <div className="call-us-main">
-          <h3 className="p-0 m-0">اتصل بنا</h3>
+          <h3 className="p-0 m-0">
+            {lang == "ar"
+              ? StringManager.contactUs.ar
+              : StringManager.contactUs.en}{" "}
+          </h3>
           <hr className="mt-2" />
-          <p className="fw-bold">حدد قناة الاتصال المفضلة لديك</p>
+          <p className="fw-bold">
+            {lang == "ar"
+              ? StringManager.preferedChannel.ar
+              : StringManager.preferedChannel.en}{" "}
+          </p>
           <Form>
             <div className="d-flex m-0 p-0 align-items-center rat">
               <Form.Check
                 type="radio"
                 id="email"
                 name="contact"
-                label="البريد الإلكتروني"
+                label={
+                  lang == "ar"
+                    ? StringManager.emailContact.ar
+                    : StringManager.emailContact.en
+                }
                 value="email"
                 className="mx-2 d-flex"
                 style={{ color: "black" }} // Adjust color if necessary
@@ -39,7 +55,9 @@ export default function ContactUs() {
                 type="radio"
                 id="mobile"
                 name="contact"
-                label="رقم الجوال"
+                label={
+                  lang == "ar" ? StringManager.phone.ar : StringManager.phone.en
+                }
                 value="mobile"
                 className="mx-2 d-flex"
                 style={{ color: "black" }} // Adjust color if necessary
@@ -49,7 +67,11 @@ export default function ContactUs() {
               <Col xs="6">
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="الاسم الأول"
+                  label={
+                    lang == "ar"
+                      ? StringManager.fName.ar
+                      : StringManager.fName.en
+                  }
                   className=""
                 >
                   <Form.Control
@@ -63,7 +85,11 @@ export default function ContactUs() {
               <Col xs="6">
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="اسم العائلة"
+                  label={
+                    lang == "ar"
+                      ? StringManager.lName.ar
+                      : StringManager.lName.en
+                  }
                   className="mb-3"
                 >
                   <Form.Control
@@ -79,7 +105,11 @@ export default function ContactUs() {
               <Col xs="6">
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="رقم الجوال"
+                  label={
+                    lang == "ar"
+                      ? StringManager.mobileNum.ar
+                      : StringManager.mobileNum.en
+                  }
                   className="ps-5"
                 >
                   <Form.Control
@@ -97,7 +127,11 @@ export default function ContactUs() {
               <Col>
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="البريد الإلكتروني"
+                  label={
+                    lang == "ar"
+                      ? StringManager.emailAddress.ar
+                      : StringManager.emailAddress.en
+                  }
                   className=""
                 >
                   <Form.Control
@@ -116,10 +150,20 @@ export default function ContactUs() {
                   onChange={handleFirstSelectChange} // Handle first selection change
                   className="rounded-0 shadow-none text-muted"
                 >
-                  <option value="ملاحظات">ملاحظات</option>
-                  <option value="التسوق أونلاين">التسوق أونلاين</option>
+                  <option value="ملاحظات">
+                    {lang == "ar"
+                      ? StringManager.feedBack.ar
+                      : StringManager.feedBack.en}
+                  </option>
+                  <option value="التسوق أونلاين">
+                    {lang == "ar"
+                      ? StringManager.onlineShop.ar
+                      : StringManager.onlineShop.en}{" "}
+                  </option>
                   <option value="الملاحظات والاستفسار">
-                    الملاحظات والاستفسار
+                    {lang == "ar"
+                      ? StringManager.inquiryFeed.ar
+                      : StringManager.inquiryFeed.en}
                   </option>
                 </Form.Select>
               </Col>
@@ -132,9 +176,21 @@ export default function ContactUs() {
                     aria-label="Default select example shadow-0"
                     onChange={(e) => setSecond(e.target.value)} // Handle second selection change
                   >
-                    <option value="النوع">النوع</option>
-                    <option value="الشكوى">الشكوى</option>
-                    <option value="الاستفسار">الاستفسار</option>
+                    <option value="النوع">
+                      {lang == "ar"
+                        ? StringManager.type.ar
+                        : StringManager.type.en}
+                    </option>
+                    <option value="الشكوى">
+                      {lang == "ar"
+                        ? StringManager.complaint.ar
+                        : StringManager.complaint.en}
+                    </option>
+                    <option value="الاستفسار">
+                      {lang == "ar"
+                        ? StringManager.inquiry.ar
+                        : StringManager.inquiry.en}
+                    </option>
                   </Form.Select>
                 </Col>
               )}
@@ -146,19 +202,41 @@ export default function ContactUs() {
                     className="rounded-0 shadow-none text-muted"
                     onChange={(e) => setThird(e.target.value)} // Handle third selection (for الشكوى)
                   >
-                    <option value="حدّد السبب">حدّد السبب</option>
-                    <option value="نادي امتيازات الشايع">
-                      نادي امتيازات الشايع
+                    <option value="حدّد السبب">
+                      {lang == "ar"
+                        ? StringManager.selectReason.ar
+                        : StringManager.selectReason.en}{" "}
                     </option>
-                    <option value="منتجات معيبة">منتجات معيبة</option>
-                    <option value="بطاقة الشايع">بطاقة الشايع</option>
+                    <option value="نادي امتيازات الشايع">
+                      {lang == "ar"
+                        ? StringManager.shaya.ar
+                        : StringManager.shaya.en}
+                    </option>
+                    <option value="منتجات معيبة">
+                      {lang == "ar"
+                        ? StringManager.faultyItems.ar
+                        : StringManager.faultyItems.en}{" "}
+                    </option>
+                    <option value="بطاقة الشايع">
+                      {lang == "ar"
+                        ? StringManager.shayaCard.ar
+                        : StringManager.shayaCard.en}{" "}
+                    </option>
                     <option value="لم يتم استلام المبلغ">
-                      لم يتم استلام المبلغ
+                      {lang == "ar"
+                        ? StringManager.notReceived.ar
+                        : StringManager.notReceived.en}
                     </option>
                     <option value="الخدمات المتوفرة داخل المحل">
-                      الخدمات المتوفرة داخل المحل
+                      {lang == "ar"
+                        ? StringManager.inStoreServ.ar
+                        : StringManager.inStoreServ.en}
                     </option>
-                    <option value="الأخرى">الأخرى</option>
+                    <option value="الأخرى">
+                      {lang == "ar"
+                        ? StringManager.others.ar
+                        : StringManager.others.en}
+                    </option>
                   </Form.Select>
                 </Col>
               )}
@@ -170,15 +248,29 @@ export default function ContactUs() {
                     className="rounded-0 shadow-none text-muted"
                     onChange={(e) => setThird(e.target.value)} // Handle third selection (for الاستفسار)
                   >
-                    <option value="حدّد السبب">حدّد السبب</option>
-                    <option value="بطاقة الشايع">بطاقة الشايع</option>
+                    <option value="حدّد السبب">
+                      {lang == "ar"
+                        ? StringManager.selectReason.ar
+                        : StringManager.selectReason.en}{" "}
+                    </option>
+                    <option value="بطاقة الشايع">
+                      {lang == "ar"
+                        ? StringManager.shayaCard.ar
+                        : StringManager.shayaCard.en}{" "}
+                    </option>
                     <option value="نادي امتيازات الشايع">
-                      نادي امتيازات الشايع
+                      {lang == "ar"
+                        ? StringManager.shaya.ar
+                        : StringManager.shaya.en}
                     </option>
                     <option value="سياسة الاستبدال والاسترجاع">
                       سياسة الاستبدال والاسترجاع
                     </option>
-                    <option value="الأخرى">الأخرى</option>
+                    <option value="الأخرى">
+                      {lang == "ar"
+                        ? StringManager.others.ar
+                        : StringManager.others.en}
+                    </option>
                   </Form.Select>
                 </Col>
               )}
@@ -188,11 +280,15 @@ export default function ContactUs() {
                 {" "}
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="رقم الطلبية (اختياري)"
+                  label={
+                    lang == "ar"
+                      ? StringManager.orderNum.ar
+                      : StringManager.orderNum.en
+                  }
                   className=""
                 >
                   <Form.Control
-                    type="email"
+                    type="text"
                     className="shadow-none border-0 "
                     placeholder=""
                     style={{ backgroundColor: "red" }}
@@ -205,11 +301,15 @@ export default function ContactUs() {
                 {" "}
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="العناصر المفقودة (اختياري)"
+                  label={
+                    lang == "ar"
+                      ? StringManager.missingItems.ar
+                      : StringManager.missingItems.en
+                  }
                   className=""
                 >
                   <Form.Control
-                    type="email"
+                    type="text"
                     className="shadow-none border-0 "
                     placeholder=""
                     style={{ backgroundColor: "red" }}
@@ -222,7 +322,11 @@ export default function ContactUs() {
                 {" "}
                 <FloatingLabel
                   controlId="floatingInput"
-                  label="رسالة نصية"
+                  label={
+                    lang == "ar"
+                      ? StringManager.message.ar
+                      : StringManager.message.en
+                  }
                   className="position-relative"
                 >
                   <Form.Control
@@ -236,7 +340,9 @@ export default function ContactUs() {
               </Col>
             </Row>
             <Button className="mt-3 rounded-0 fw-blod bg-dark border-0">
-              إرسال
+              {lang == "ar"
+                ? StringManager.submitButton.ar
+                : StringManager.submitButton.en}
             </Button>
           </Form>
         </div>

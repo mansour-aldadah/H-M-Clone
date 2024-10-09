@@ -1,20 +1,26 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import "./AboutUs.css";
+import { useContext } from "react";
+import langContext from "../../services/context/langContext";
+import StringManager from "../../resources/stringManager";
 
 export default function AboutUs() {
+  const [lang, setLang] = useContext(langContext);
   return (
     <section className="about-us py-5">
       <Container>
         <div className="main text-center">
-          <h1>مجموعة اتش آند ام</h1>
+          <h1>
+            {" "}
+            {lang == "ar"
+              ? StringManager.aboutUSTitle.ar
+              : StringManager.aboutUSTitle.en}
+          </h1>
           <p className="py-3 px-3 px-md-5">
-            تعد مجموعة اتش آند ام واحدة من شركات الأزياء الرائدة في العالم –
-            وبالإضافة إلى اتش آند ام، تضم المجموعة علامات أذر ستوريز، وكوس،
-            وCheap Monday، وMonki، وWeekday، واتش آند ام هوم. وتتميز جميع منتجات
-            اتش آند ام بكونها متفردة بهويتها ومتحدة بشغفها وتطلعها لعالم الأزياء
-            والموضة، ودائماً ما تسعى إلى ضمان جودة منتجاتها وتقديمها بطريقة
-            مستدامة لزبائنها.
+            {lang == "ar"
+              ? StringManager.aboutUSpas1.ar
+              : StringManager.aboutUSpas1.en}
           </p>
         </div>
         <hr className="m-auto" style={{ width: "200px" }} />
@@ -22,14 +28,15 @@ export default function AboutUs() {
           <Col md="6"></Col>
           <Col md="6" className="left text-end">
             <div className="sec text-center w-100 py-5">
-              <h2>الأزياء التي يحبها الجميع</h2>
+              <h2>
+                {lang == "ar"
+                  ? StringManager.aboutUSTitle2.ar
+                  : StringManager.aboutUSTitle2.en}{" "}
+              </h2>
               <p className="px-3 px-md-5 mb-0 mt-3">
-                بدأ كل شيء مع متجر واحد لبيع الملابس النسائية في مدينة فيستيروس،
-                السويد، في عام 1947. أما اليوم، فإن مجموعة اتش آند ام لديها
-                العديد من العلامات التجارية الخاصة بالأزياء وتتميز بحضور وتواجد
-                عالمي قوي. وقد توسعنا على المدى الطويل من خلال مواقعنا على
-                الانترنت ومتاجرنا الجديدة في الأسواق في كل مكان. مهمتنا هي توفير
-                أزياء ذات جودة عالية في متناول أكبر عدد ممكن من الناس.
+                {lang == "ar"
+                  ? StringManager.aboutUSpas2.ar
+                  : StringManager.aboutUSpas2.en}
               </p>
             </div>
           </Col>
@@ -38,12 +45,16 @@ export default function AboutUs() {
         <Row>
           <Col md="6" className="left text-end">
             <div className="sec text-center w-100 py-5">
-              <h2>كيف نقوم بمهمتنا</h2>
+              <h2>
+                {" "}
+                {lang == "ar"
+                  ? StringManager.aboutUSTitle3.ar
+                  : StringManager.aboutUSTitle3.en}{" "}
+              </h2>
               <p className="px-3 px-md-5 mb-0 mt-3">
-                نسعى دوماً لتقديم أفضل الأزياء المستدامة لزبائننا، كما أن التزام
-                موظفينا هو عامل أساسي من نجاحنا. ولتحقيق النجاح فإننا نحرص دوماً
-                على خلق مستقبل أفضل للأزياء، ونقوم باستغلال قدراتنا في السوق
-                لتنمية بيئة صناعة أزياء مثالية حول العالم.
+                {lang == "ar"
+                  ? StringManager.aboutUSpas3.ar
+                  : StringManager.aboutUSpas3.en}
               </p>
             </div>
           </Col>
@@ -54,14 +65,16 @@ export default function AboutUs() {
           <Col md="6"></Col>
           <Col md="6" className="left text-end">
             <div className="sec text-center w-100 py-5">
-              <h2>من نحن</h2>
+              <h2>
+                {" "}
+                {lang == "ar"
+                  ? StringManager.aboutUSTitle4.ar
+                  : StringManager.aboutUSTitle4.en}
+              </h2>
               <p className="px-3 px-md-5 mb-0 mt-3">
-                تضم مجموعة اتش آند ام أكثر من 161,000 موظف من جنسيات وخلفيات
-                مختلفة حول العالم حريصون أشد الحرص على خلق أفضل العروض وأفضل
-                تجارب التسوق للزبائن. جميعنا في اتش آند ام نتشارك في طريقة عمل
-                تستند على القيم، ومبنية على احترام الزبون بشكل أساسي. وتشتمل
-                قيمنا التي نتشاركها على المساعدة في خلق ثقافة شركة مفتوحة
-                وديناميكية ومتاحة ومتوفرة للجميع.
+                {lang == "ar"
+                  ? StringManager.aboutUSpas4.ar
+                  : StringManager.aboutUSpas4.en}
               </p>
             </div>
           </Col>
@@ -70,19 +83,28 @@ export default function AboutUs() {
         <Row>
           <Col md="6" className="left text-end">
             <div className="sec text-center w-100 py-5">
-              <h2>إحصائيات مهمة</h2>
+              <h2>
+                {" "}
+                {lang == "ar"
+                  ? StringManager.aboutUSFegures.ar
+                  : StringManager.aboutUSFegures.en}{" "}
+              </h2>
               <p className="px-3 px-md-5 mb-0 mt-3">
                 <ul className="text-end">
                   <li>
-                    لقد قامت مجموعة اتش آند ام بتوظيف 13,000 موظف جديد في عام
-                    2016، لنصل بذلك إلى فريق عمل يتكون من 161,000 موظف.
+                    {lang == "ar"
+                      ? StringManager.aboutUSfigure1.ar
+                      : StringManager.aboutUSfigure1.en}
                   </li>
                   <li>
-                    بلغت مبيعات مجموعة اتش آند ام بما في ذلك ضريبة القيمة
-                    المضافة 223 مليار كرونة سويدية في عام 2016.
+                    {lang == "ar"
+                      ? StringManager.aboutUSfigure2.ar
+                      : StringManager.aboutUSfigure2.en}
                   </li>
                   <li>
-                    لدينا 43 سوق على الانترنت وأكثر من 4500 متجر في 69 سوق.
+                    {lang == "ar"
+                      ? StringManager.aboutUSfigure3.ar
+                      : StringManager.aboutUSfigure3.en}
                   </li>
                 </ul>
               </p>
@@ -95,24 +117,34 @@ export default function AboutUs() {
           <Col md="6"></Col>
           <Col md="6" className="left text-end">
             <div className="sec text-center w-100 py-5">
-              <h2>هل تعلم</h2>
+              <h2>
+                {" "}
+                {lang == "ar"
+                  ? StringManager.aboutUSknow.ar
+                  : StringManager.aboutUSknow.en}{" "}
+              </h2>
               <p className="px-3 px-md-5 mb-0 mt-3">
                 <ul className="text-end">
                   <li>
-                    أن 96% من الكهرباء التي استخدمناها في عام 2016 قادمة من
-                    مصادر متجددة.
+                    {" "}
+                    {lang == "ar"
+                      ? StringManager.aboutUSinfo1.ar
+                      : StringManager.aboutUSinfo1.en}
                   </li>
                   <li>
-                    أننا قمنا بالتقليل من الغازات المنبعثة بنسبة 47% في عام
-                    2016.
+                    {lang == "ar"
+                      ? StringManager.aboutUSinfo2.ar
+                      : StringManager.aboutUSinfo2.en}
                   </li>
                   <li>
-                    أننا ساعدنا بخلق حوالي 1.6 مليون فرصة وظيفية للأشخاص
-                    العاملين لدى موردينا في قطاع صناعة النسيج.
+                    {lang == "ar"
+                      ? StringManager.aboutUSinfo3.ar
+                      : StringManager.aboutUSinfo3.en}
                   </li>
                   <li>
-                    أن متاجرنا قامت بجمع أكثر من 55,000 طن من الملابس منذ عام
-                    2013، وذلك لإعادة استخدامها وإعادة تدويرها.
+                    {lang == "ar"
+                      ? StringManager.aboutUSinfo4.ar
+                      : StringManager.aboutUSinfo4.en}
                   </li>
                 </ul>
               </p>
